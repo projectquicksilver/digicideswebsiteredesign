@@ -4,7 +4,7 @@ import { ProgressiveBlur } from "../ui/progressive-blur";
 
 const OurCustomers = () => {
   return (
-    <div className="relative z-10 flex w-full flex-col items-center justify-start gap-8 pt-24 pb-4 text-foreground">
+    <div className="relative z-10 flex w-full flex-col items-center justify-start gap-8 pt-20 sm:pt-24 md:pt-24 lg:pt-24 xl:pt-24 2xl:pt-24 pb-4 text-foreground">
       <h1 className="text-center text-3xl md:text-4xl">
             Our
             <span className="rounded-md ml-2 bg-primary/10 px-2 text-primary">
@@ -12,12 +12,12 @@ const OurCustomers = () => {
             </span>
           </h1>
       <ProgressiveBlur
-        className="pointer-events-none absolute left-0 top-1/4 z-10 h-[200px] w-[100px] md:w-[200px]"
+        className="hidden sm:block md:block lg:block xl:block 2xl:block pointer-events-none absolute left-0 top-1/4 z-10 h-[200px] w-[100px] md:w-[200px]"
         direction="left"
         blurIntensity={1}
       />
       <ProgressiveBlur
-        className="pointer-events-none absolute right-0 top-1/4 z-10 h-[200px] w-[100px] md:w-[200px]"
+        className="hidden sm:block md:block lg:block xl:block 2xl:block pointer-events-none absolute right-0 top-1/4 z-10 h-[200px] w-[100px] md:w-[200px]"
         direction="right"
         blurIntensity={1}
       />

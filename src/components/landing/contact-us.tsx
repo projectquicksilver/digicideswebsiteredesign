@@ -1,33 +1,37 @@
-"use client";
+'use client';
 
 import Image from "next/image";
-import { useForm, type SubmitHandler } from "react-hook-form";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
-
-type FormData = {
-  name: string;
-  organization: string;
-  email: string;
-  message: string;
-};
+import { useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactUs = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<FormData>();
+  const [formData, setFormData] = useState({ name: '', organization: '', email: '', message: '' });
+  const [isVerified, setIsVerified] = useState(false);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const [error, setError] = useState('');
 
-  const onSubmit: SubmitHandler<FormData> = (data) => {
-    console.log("Form Submitted:", data);
-    alert("Form submitted successfully!");
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const token = recaptchaRef.current?.getValue();
+
+    if (!token) {
+      setError("Please verify reCAPTCHA");
+      return;
+    }
+
+    // At this point, reCAPTCHA is passed
+    // You can now submit formData to Formspree, Getform, etc.
+    console.log("Form submitted", formData);
+    recaptchaRef.current?.reset();
   };
 
   return (
-    <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-48 text-foreground md:px-24 xl:px-44">
+    <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-20 sm:pt-48 md:pt-48 lg:pt-48 xl:pt-48 2xl:pt-48 text-foreground md:px-24 xl:px-44">
       <div className="flex w-full gap-5">
         <div className="hidden h-[770px] w-full overflow-hidden rounded-[18px] md:flex md:w-1/2">
           <Image
@@ -39,7 +43,7 @@ const ContactUs = () => {
           />
         </div>
         <form
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleSubmit}
           className="flex w-full flex-col items-start justify-start gap-7 rounded-[18px] bg-[#fafafa] p-6 md:w-1/2"
         >
           <h1 className="text-center text-3xl md:text-4xl">
@@ -52,69 +56,67 @@ const ContactUs = () => {
             Let&apos;s work together
           </p>
 
+          {/* Name Field */}
           <div className="flex w-full flex-col gap-3">
             <Label className="text-lg">Your name</Label>
             <Input
               type="text"
               placeholder="Enter your name"
-              {...register("name", { required: "Name is required" })}
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               className="h-12"
+              required
             />
-            {errors.name && (
-              <p className="text-sm text-red-500">
-                {errors.name?.message?.toString()}
-              </p>
-            )}
           </div>
+
+          {/* Organization Field */}
           <div className="flex w-full flex-col gap-3">
             <Label className="text-lg">Organization name</Label>
             <Input
               type="text"
               placeholder="Enter your organization name"
-              {...register("organization", {
-                required: "Organization name is required",
-              })}
+              value={formData.organization}
+              onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
               className="h-12"
+              required
             />
-            {errors.organization && (
-              <p className="text-sm text-red-500">
-                {errors.organization.message?.toString()}
-              </p>
-            )}
           </div>
+
+          {/* Email Field */}
           <div className="flex w-full flex-col gap-3">
             <Label className="text-lg">Your email</Label>
             <Input
               type="email"
               placeholder="Enter your email"
               className="h-12"
-              {...register("email", {
-                required: "Email is required",
-                pattern: {
-                  value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                  message: "Enter a valid email",
-                },
-              })}
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              required
             />
-            {errors.email && (
-              <p className="text-sm text-red-500">
-                {errors.email?.message?.toString()}
-              </p>
-            )}
           </div>
+
+          {/* Message Field */}
           <div className="flex w-full flex-col gap-1">
             <Label className="text-lg">Your message</Label>
             <Textarea
               placeholder="Enter your message"
               className="h-32"
-              {...register("message", { required: "Message is required" })}
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              required
             />
-            {errors.message && (
-              <p className="text-sm text-red-500">
-                {errors.message?.message?.toString()}
-              </p>
-            )}
           </div>
+
+          {/* reCAPTCHA Component */}
+          <ReCAPTCHA
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+            ref={recaptchaRef}
+          />
+
+          {/* Error Text */}
+          {error && <p className="text-red-500">{error}</p>}
+
+          {/* Submit Button */}
           <Button type="submit" variant="default" className="w-full" size="lg">
             Submit
           </Button>

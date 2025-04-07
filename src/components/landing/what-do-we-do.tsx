@@ -2,7 +2,7 @@ import StepsCard from "../ui/steps-card";
 
 const WhatDoWeDo = () => {
   return (
-    <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-32 text-foreground md:px-24 xl:px-44">
+    <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-20 sm:pt-32 md:pt-32 lg:pt-32 xl:pt-32 2xl:pt-32 text-foreground md:px-24 xl:px-44">
       <h1 className="text-center text-3xl md:text-4xl">
         What do we{" "}
         <span className="rounded-md bg-primary/10 px-2 text-primary">do?</span>
