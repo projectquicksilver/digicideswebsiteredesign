@@ -21,6 +21,7 @@ const Navbar = () => {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Product", href: "/product" },
+    { name: "Services", href: "/services" },
   ];
 
   const toggleSubMenu = (name: string) => {

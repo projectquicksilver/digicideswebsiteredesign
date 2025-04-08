@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const HowDoWeDo = () => {
   return (
-    <div className="z-10 flex  w-full flex-col items-center justify-start gap-8 px-4 pt-48 text-foreground md:px-24 xl:px-44">
+    <div className="z-10 flex  w-full flex-col items-center justify-start gap-8 px-4 pt-20 sm:pt-32 md:pt-32 lg:pt-32 xl:pt-32 2xl:pt-32 text-foreground md:px-24 xl:px-44">
       <div className="flex flex-wrap-reverse">
         <div className="h-full w-full md:w-1/2 my-auto ">
           <Image
@@ -11,7 +11,7 @@ const HowDoWeDo = () => {
             alt="What do we do"
             width={1000}
             height={1400}
-            className="h-[400px] pt-5 md:pt-0"
+            className="h-[400px] pt-5 md:pt-0 object-contain sm:object-none md:object-none lg:object-none xl:object-none 2xl:object-none"
           />
         </div>
         <div className="flex w-full flex-col md:items-start md:justify-start lg:items-start lg:justify-start xl:items-start xl:justify-start gap-4 md:w-1/2">
