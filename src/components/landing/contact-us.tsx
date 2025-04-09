@@ -10,7 +10,6 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({ name: '', organization: '', email: '', message: '' });
-  const [isVerified, setIsVerified] = useState(false);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
