@@ -11,7 +11,7 @@ const HowDoWeDo = () => {
             alt="What do we do"
             width={1000}
             height={1400}
-            className="h-[400px] pt-5 md:pt-0 object-contain sm:object-none md:object-none lg:object-none xl:object-none 2xl:object-none"
+            className="h-[400px] pt-5 md:pt-0 object-contain"
           />
         </div>
         <div className="flex w-full flex-col md:items-start md:justify-start lg:items-start lg:justify-start xl:items-start xl:justify-start gap-4 md:w-1/2">

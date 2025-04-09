@@ -10,10 +10,9 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({ name: '', organization: '', email: '', message: '' });
-  const [isVerified, setIsVerified] = useState(false);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [error, setError] = useState('');
-
+  const [success, setSuccess] = useState('');
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -26,7 +25,20 @@ const ContactUs = () => {
 
     // At this point, reCAPTCHA is passed
     // You can now submit formData to Formspree, Getform, etc.
-    console.log("Form submitted", formData);
+    try {
+      const response = await fetch("/api/contact-us", {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        setError("Failed to submit form");
+      }
+
+      setSuccess("Form submitted successfully");
+    } catch (error) {
+      console.error("Error submitting form", error);
+    }
     recaptchaRef.current?.reset();
   };
 
@@ -115,6 +127,9 @@ const ContactUs = () => {
 
           {/* Error Text */}
           {error && <p className="text-red-500">{error}</p>}
+          
+          {/* Success Text */}
+          {success && <p className="text-green-500">{success}</p>}
 
           {/* Submit Button */}
           <Button type="submit" variant="default" className="w-full" size="lg">
