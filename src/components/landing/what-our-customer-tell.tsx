@@ -7,10 +7,12 @@ const WhatOurCustomerTell = () => {
     <div className="z-10 flex w-full flex-col items-center justify-start gap-8 text-foreground pt-20 sm:pt-48 md:pt-48 lg:pt-48 xl:pt-48 2xl:pt-48">
       <h1 className="text-center flex justify-center items-center gap-2 text-xl sm:text-3xl md:text-4xl">
         <AwardLeft />
+        <div className="flex flex-row items-center gap-2">
         What our
         <span className="rounded-md bg-primary/10 px-2 text-primary">
           Customer
         </span>
+        </div>
         tell about us
         <AwardRight />
       </h1>

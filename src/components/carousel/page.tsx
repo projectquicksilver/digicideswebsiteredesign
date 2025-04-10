@@ -80,7 +80,7 @@ export default function TestingCarousel() {
         direction="right"
         blurIntensity={1}
       />
-      <EmblaCarousel slides={SLIDES} options={OPTIONS} steps={steps} />
+      <EmblaCarousel steps={steps} />
     </div>
   );
 }
