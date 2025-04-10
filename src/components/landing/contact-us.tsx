@@ -56,7 +56,7 @@ const ContactUs = () => {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="flex w-full flex-col items-start justify-start gap-7 rounded-[18px] bg-[#fafafa] p-6 md:w-1/2"
+          className="flex w-full flex-col items-start justify-start gap-4 rounded-[18px] bg-[#fafafa] p-6 md:w-1/2"
         >
           <h1 className="text-center text-3xl md:text-4xl">
             Contact

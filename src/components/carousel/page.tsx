@@ -1,17 +1,13 @@
 "use client";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
-import type { EmblaOptionsType } from "embla-carousel";
 import "./css/embla.css";
 import EmblaCarousel from "./jss/EmblaCarousel";
 
-const OPTIONS: EmblaOptionsType = { loop: true };
-const SLIDE_COUNT = 3;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const steps = [
   {
     description: 
-    "“Impressed by Digicides’ creativity, professionalism, and results-driven approach. A true partner for digital success! ",
+    "“Impressed by Digicides creativity, professionalism, and results-driven approach. A true partner for digital success! ",
     description2:
     "Their team is passionate, knowledgeable, and dedicated to delivering top-notch digital experiences. Coromandel is delighted to work with them.“",
     role: "Marketing Manager",
@@ -80,7 +76,7 @@ export default function TestingCarousel() {
         direction="right"
         blurIntensity={1}
       />
-      <EmblaCarousel slides={SLIDES} options={OPTIONS} steps={steps} />
+      <EmblaCarousel steps={steps} />
     </div>
   );
 }
