@@ -51,7 +51,7 @@ const ContactUs = () => {
             alt="contact"
             width={1000}
             height={1400}
-            className="h-full w-full pt-5 md:pt-0"
+            className="h-full w-full pt-5 md:pt-0 object-contain"
           />
         </div>
         <form
