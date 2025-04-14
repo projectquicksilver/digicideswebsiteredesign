@@ -66,7 +66,7 @@ const steps = [
 export default function TestingCarousel() {
   return (
     <div className="relative">
-      <ProgressiveBlur
+      {/* <ProgressiveBlur
         className="pointer-events-none absolute -left-0 top-[0%] z-[50] h-[500px] w-[200px] hidden sm:block md:block lg:block xl:block"
         direction="left"
         blurIntensity={1}
@@ -75,7 +75,7 @@ export default function TestingCarousel() {
         className="pointer-events-none absolute -right-0 top-[0%] z-[50] h-[500px] w-[200px] hidden sm:block md:block lg:block xl:block"
         direction="right"
         blurIntensity={1}
-      />
+      /> */}
       <EmblaCarousel steps={steps} />
     </div>
   );
