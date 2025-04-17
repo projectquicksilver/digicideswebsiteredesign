@@ -10,7 +10,7 @@ const WhatOurCustomerTell = () => {
         <div className="flex flex-row items-center gap-2">
         What our
         <span className="rounded-md bg-primary/10 px-2 text-primary">
-          Customer
+          Customers
         </span>
         </div>
         tell about us
