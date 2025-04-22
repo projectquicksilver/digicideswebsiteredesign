@@ -21,24 +21,24 @@ const WhatDoWeDo = () => {
         <div className="flex w-full flex-col gap-3 md:flex-row">
           <StepsCard
             title="Discover"
-            text="Industry-specific SaaS solutions designed exclusively for agriculture."
+            text="Identify and connect with potential customers who are genuine and interested in your products."
             imagePath="/images/discover.png"
           />
           <StepsCard
             title="Engage"
-            text="Industry-specific SaaS solutions designed exclusively for agriculture."
+            text="Leverage omni-channel communication tools to interact with farmers effectively."
             imagePath="/images/engage.png"
           />
         </div>
         <div className="flex w-full flex-col gap-3 md:flex-row">
           <StepsCard
             title="Convert"
-            text="Industry-specific SaaS solutions designed exclusively for agriculture."
+            text="Turn high-intent leads into loyal customers with targeted follow-ups and insights."
             imagePath="/images/convert.png"
           />
           <StepsCard
             title="Analyse"
-            text="From lead generation to conversion tracking, we’ve got you covered."
+            text="Gain complete transparent on lead performance, farmer interactions, and retail-level product management."
             imagePath="/images/analyse.png"
           />
         </div>
