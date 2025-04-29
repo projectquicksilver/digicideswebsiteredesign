@@ -1,4 +1,3 @@
-import StepsCard from "./ui/steps-card";
 import TeamCard from "./ui/team-card";
 
 export default function MeetOurTeam() {

@@ -1,5 +1,4 @@
 "use client";
-import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import "./css/embla.css";
 import EmblaCarousel from "./jss/EmblaCarousel";
 
