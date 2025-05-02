@@ -3,15 +3,15 @@ import StepsCard from "../ui/steps-card";
 const WhatDoWeDo = () => {
   return (
     <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-20 sm:pt-32 md:pt-32 lg:pt-32 xl:pt-32 2xl:pt-32 text-foreground md:px-24 xl:px-44">
-      <h1 className="text-center text-3xl md:text-4xl">
+      <text className="text-center text-3xl md:text-4xl">
         What do we{" "}
         <span className="rounded-md bg-primary/10 px-2 text-primary">do?</span>
-      </h1>
+      </text>
       <p className="text-center text-sm font-normal text-muted-foreground">
-        We are a product-driven company dedicated exclusively to the agri
-        industry. Our suite of advanced SaaS products and solutions helps
-        businesses enhance marketing, communication, and customer
-        engagement—ultimately leading to better sales and business growth.
+      We are a product-first company dedicated to revolutionizing agricultural marketing. Our suite of
+      innovative SaaS solutions enables agribusinesses to elevate their marketing, improve
+      communication, and engage more meaningfully—leading to sustainable sales and business
+      growth.
       </p>
       <div className="h-[1px] w-full bg-border" />
       <h4 className="text-center text-xl font-normal text-foreground">
@@ -21,7 +21,8 @@ const WhatDoWeDo = () => {
         <div className="flex w-full flex-col gap-3 md:flex-row">
           <StepsCard
             title="Discover"
-            text="Identify and connect with potential customers who are genuine and interested in your products."
+            text="Identify and connect with potential customers in the agriculture industry who
+            are genuine and interested in your agricultural products."
             imagePath="/images/discover.png"
           />
           <StepsCard
@@ -38,7 +39,8 @@ const WhatDoWeDo = () => {
           />
           <StepsCard
             title="Analyse"
-            text="Gain complete transparent on lead performance, farmer interactions, and retail-level product management."
+            text="Gain complete transparency on lead performance, farmer interactions, and
+            retail-level product management."
             imagePath="/images/analyse.png"
           />
         </div>

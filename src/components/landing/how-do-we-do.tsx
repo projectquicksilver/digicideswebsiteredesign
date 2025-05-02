@@ -23,8 +23,8 @@ const HowDoWeDo = () => {
           </h1>
           <div className="h-[1px] w-full bg-border" />
           <p className="text-left text-md font-normal text-muted-foreground">
-            Our platform harnesses cutting-edge technology to streamline data
-            and communication.
+          Our platform harnesses cutting-edge technology to streamline agricultural data and
+          communication.
           </p>
           <p className="text-left text-md font-normal text-muted-foreground">
             It integrates inputs from missed calls, app data, and social media
@@ -40,8 +40,7 @@ const HowDoWeDo = () => {
             tools like Superset, LogStash, or OLAP for insightful dashboards.
           </p>
           <p className="text-left text-md font-normal text-muted-foreground">
-            Data lakes fuel advanced reporting, driving smarter decisions for
-            your business.
+          Data lakes fuel advanced reporting, driving smarter data-driven decisions for your agri-business.
           </p>
           <Link href="/under-construction" className="text-center bg-white text-orange-500 text-xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl hover:bg-white">
             Know more ↗

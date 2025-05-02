@@ -35,9 +35,8 @@ const Footer = () => {
               </span>
             </div>
             <p className="mt-4 max-w-lg text-left text-sm sm:text-base md:text-base lg:text-base text-muted-foreground">
-              We are empowering agribusinesses with a tech-driven platform for
-              seamless lead generation, targeted engagement, and complete
-              transparency.
+            We are empowering agribusinesses with a tech-driven platform for seamless lead generation,
+            targeted farmer engagement, and complete marketing transparency.
             </p>
             <div className="flex flex-row sm:flex-row gap-10">
               <Link className="mt-10" href="/">
