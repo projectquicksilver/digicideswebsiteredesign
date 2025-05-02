@@ -16,7 +16,7 @@ const Hero = () => {
     <section className="container relative flex flex-col items-center gap-2 text-center text-foreground ">
       <PixelBg />
       <h1 className="text-4xl font-normal tracking-tighter text-muted-foreground sm:text-5xl md:text-7xl lg:leading-[1.1] z-10">
-        Connecting the Dots...
+        Connecting the Dots in Agri Marketing
       </h1>
 
       <p className="max-w-xl text-balance text-2xl text-primary sm:text-4xl md:text-wrap z-10">
@@ -79,9 +79,8 @@ const Hero = () => {
           </div>
         </div>
         <p className="font-regular max-w-2xl lg:text-left xl:text-left mx-auto lg:mx-0 xl:mx-0 text-xl text-muted-foreground">
-          We are empowering agribusinesses with a tech-driven platform for
-          seamless lead generation, targeted engagement, and complete
-          transparency.
+        We are empowering agribusinesses with a tech-driven platform for seamless lead generation,
+        targeted farmer engagement, and complete marketing transparency.
         </p>
         <Link className="w-[240px] h-[64px] mx-auto lg:mx-0 xl:mx-0" href="mailto:connect@digicides.com">
           <Button variant="secondary" size="lg" className="h-full w-full text-xl">

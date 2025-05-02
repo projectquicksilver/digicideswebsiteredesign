@@ -58,12 +58,12 @@ const ContactUs = () => {
           onSubmit={handleSubmit}
           className="flex w-full flex-col items-start justify-start gap-4 rounded-[18px] bg-[#fafafa] p-6 md:w-1/2"
         >
-          <h1 className="text-center text-3xl md:text-4xl">
+          <h2 className="text-center text-3xl md:text-4xl">
             Contact
             <span className="ml-2 rounded-md bg-primary/10 px-2 text-primary">
               us
             </span>
-          </h1>
+          </h2>
           <p className="text-left text-lg font-normal text-muted-foreground">
             Let&apos;s work together
           </p>
