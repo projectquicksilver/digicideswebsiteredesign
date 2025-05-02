@@ -15,12 +15,12 @@ const HowDoWeDo = () => {
           />
         </div>
         <div className="flex w-full flex-col md:items-start md:justify-start lg:items-start lg:justify-start xl:items-start xl:justify-start gap-4 md:w-1/2">
-          <h1 className="text-center text-3xl md:text-4xl">
+          <h2 className="text-center text-3xl md:text-4xl">
             How do we{" "}
             <span className="rounded-md bg-primary/10 px-2 text-primary">
               do?
             </span>
-          </h1>
+          </h2>
           <div className="h-[1px] w-full bg-border" />
           <p className="text-left text-md font-normal text-muted-foreground">
           Our platform harnesses cutting-edge technology to streamline agricultural data and
