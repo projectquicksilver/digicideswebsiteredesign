@@ -21,7 +21,20 @@ const Navbar = () => {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Product", href: "/product" },
-    { name: "Services", href: "/services" },
+    {
+      name: "Services",
+      href: "/services",
+      dropdown: [
+        {
+          name: "Market Research and Campaign Execution for Agri Brands",
+          href: "/services/market-research-and-campaign-execution-for-agri-brands",
+        },
+        {
+          name: "Performance Marketing and SEO Services for Agri Brands",
+          href: "/services/performance-marketing-and-seo-services-for-agri-brands",
+        },
+      ],
+    },
   ];
 
   const toggleSubMenu = (name: string) => {
@@ -62,21 +75,46 @@ const Navbar = () => {
             <div className="ml-4 hidden items-center lg:flex">
               <NavigationMenu>
                 <NavigationMenuList>
-                  {MENU_ITEMS.map((item) => (
-                    <NavigationMenuItem key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
-                      >
-                        {item.name}
-                      </Link>
-                    </NavigationMenuItem>
-                  ))}
+                  <NavigationMenuItem>
+                    <Link
+                      href="/Home"
+                      className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
+                    >
+                      Home
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <Link
+                      href="/About"
+                      className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
+                    >
+                      About
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <Link
+                      href="/services"
+                      className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
+                    >
+                      Services
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <Link
+                      href="/Product"
+                      className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
+                    >
+                      Product
+                    </Link>
+                  </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
             </div>
             <div className="flex h-[51px] items-center justify-center space-x-2">
-              <Link className="h-full w-[200px] hidden lg:block" href="mailto:connect@digicides.com">
+              <Link
+                className="hidden h-full w-[200px] lg:block"
+                href="mailto:connect@digicides.com"
+              >
                 <Button variant="default" className="h-full w-full">
                   <span className="text-lg text-black">Get in touch ↗ </span>
                 </Button>
@@ -99,25 +137,48 @@ const Navbar = () => {
       </header>
 
       {isOpen && (
-        <div className="fixed h-1/3 inset-0 top-20 z-[199] mx-4 rounded-[44px] bg-black/80 p-4 backdrop-blur-lg lg:hidden">
+        <div className="fixed inset-0 top-20 z-[199] mx-4 h-1/3 rounded-[44px] bg-black/80 p-4 backdrop-blur-lg lg:hidden">
           <div className="flex flex-col items-start gap-4">
-            {MENU_ITEMS.map((item) => (
-              <div className="flex w-full flex-col gap-4" key={item.name}>
+              <div className="flex w-full flex-col gap-4">
                 <div className="flex flex-col gap-2">
-                  <Link
-                    href={item.href}
-                  >
+                  <Link href="/Home">
                     <Button
-                    variant="link"
-                    className="flex w-full items-center justify-center p-0 text-sm text-background"
-                    onClick={() => toggleSubMenu(item.name)}
-                  >
-                    <span>{item.name}</span>
-                  </Button>
+                      variant="link"
+                      className="flex w-full items-center justify-center p-0 text-sm text-background"
+                      onClick={() => toggleSubMenu("Home")}
+                    >
+                      <span>Home</span>
+                    </Button>
+                  </Link>
+                  <Link href="/About">
+                    <Button
+                      variant="link"
+                      className="flex w-full items-center justify-center p-0 text-sm text-background"
+                      onClick={() => toggleSubMenu("About")}
+                    >
+                      <span>About</span>
+                    </Button>
+                  </Link>
+                  <Link href="/services">
+                    <Button
+                      variant="link"
+                      className="flex w-full items-center justify-center p-0 text-sm text-background"
+                      onClick={() => toggleSubMenu("Services")}
+                    >
+                      <span>Services</span>
+                    </Button>
+                  </Link>
+                  <Link href="/product">
+                    <Button
+                      variant="link"
+                      className="flex w-full items-center justify-center p-0 text-sm text-background"
+                      onClick={() => toggleSubMenu("Product")}
+                    >
+                      <span>Product</span>
+                    </Button>
                   </Link>
                 </div>
               </div>
-            ))}
             <Link className="h-full w-full" href="mailto:connect@digicides.com">
               <Button variant="default" className="h-full w-full">
                 <span className="text-lg text-black">Get in touch ↗ </span>
