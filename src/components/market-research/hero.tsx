@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import PixelBg from "@/components/ui/pixel-bg";
-import RightElementMobile from "@/components/ui/right-element-mobile";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,34 +12,34 @@ export default function MarketResearchHero() {
     </h1>
 
     <div className="block xl:hidden">
-    <div className="-ml-16">
+    <div className="ml-4">
         <Image src="/market-research/market-research-hero.png" alt="Right Element" width={600} height={600} />
       </div>
     </div>
     <div className="flex flex-row">
       <div className="flex w-full flex-col gap-10 py-4 pt-16">
-        <div className="text-left pt-20">
-          <h2 className="text-6xl font-light tracking-tighter text-muted-foreground">
+        <div className="sm:text-left md:text-left lg:text-left xl:text-left 2xl:text-left 3xl:text-left 4xl:text-left 5xl:text-left 6xl:text-left 7xl:text-left 8xl:text-left 9xl:text-left 10xl:text-left text-center pt-20">
+          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light tracking-tighter text-muted-foreground">
             Know Your <br/> Audience
           </h2>
-          <h2 className="text-6xl font-normal tracking-tighter text-orange-500">
+          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal tracking-tighter text-orange-500">
             Act with Precision
           </h2>
         </div>
-        <p className="font-regular mx-auto max-w-2xl text-xl text-muted-foreground lg:mx-0 lg:text-left xl:mx-0 xl:text-left">
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-regular mx-10 max-w-2xl text-muted-foreground lg:mx-0 lg:text-left xl:mx-0 xl:text-left">
           Collect valuable insights directly from the field—while running
           digital campaigns that promote your brand and engage real farmers.
           At Digicides, we blend market research with campaign execution to
           help agri brands grow smarter.
         </p>
         <Link
-          className="mx-auto h-[64px] w-[440px] lg:mx-0 xl:mx-0"
+          className="mx-auto h-[64px] w-[380px] sm:w-[440px] md:w-[440px] lg:w-[440px] xl:w-[440px] lg:mx-0 xl:mx-0"
           href="mailto:connect@digicides.com"
         >
           <Button
             variant="secondary"
             size="lg"
-            className="h-full w-full text-xl"
+            className="h-full w-full text-md sm:text-xl md:text-xl lg:text-xl xl:text-2xl"
           >
             Start a Research-Driven Campaign
           </Button>
