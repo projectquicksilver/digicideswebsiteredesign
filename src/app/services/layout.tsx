@@ -9,9 +9,8 @@ interface Props {
 const LandingLayout = ({ children }: Props) => {
   return (
     <>
-
       <Navbar />
-      <main className="relative z-40 mx-auto w-full overflow-hidden">
+      <main className="pt-20">
         {children}
       </main>
       <Footer />

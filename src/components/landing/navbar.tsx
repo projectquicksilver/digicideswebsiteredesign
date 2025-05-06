@@ -17,26 +17,6 @@ const Navbar = () => {
 
   console.log(openSubMenu);
 
-  const MENU_ITEMS = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Product", href: "/product" },
-    {
-      name: "Services",
-      href: "/services",
-      dropdown: [
-        {
-          name: "Market Research and Campaign Execution for Agri Brands",
-          href: "/services/market-research-and-campaign-execution-for-agri-brands",
-        },
-        {
-          name: "Performance Marketing and SEO Services for Agri Brands",
-          href: "/services/performance-marketing-and-seo-services-for-agri-brands",
-        },
-      ],
-    },
-  ];
-
   const toggleSubMenu = (name: string) => {
     setOpenSubMenu((prev) => (prev === name ? null : name));
   };
@@ -77,7 +57,7 @@ const Navbar = () => {
                 <NavigationMenuList>
                   <NavigationMenuItem>
                     <Link
-                      href="/Home"
+                      href="/"
                       className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
                     >
                       Home
@@ -85,7 +65,7 @@ const Navbar = () => {
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <Link
-                      href="/About"
+                      href="/about"
                       className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
                     >
                       About
@@ -93,7 +73,7 @@ const Navbar = () => {
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <Link
-                      href="/Product"
+                      href="/product"
                       className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
                     >
                       Product
@@ -155,11 +135,11 @@ const Navbar = () => {
       </header>
 
       {isOpen && (
-        <div className="fixed inset-0 top-20 z-[199] mx-4 h-1/3 rounded-[44px] bg-black/80 p-4 backdrop-blur-lg lg:hidden">
+        <div className="fixed inset-0 top-20 z-[199] mx-4 h-fit rounded-[44px] bg-black/80 p-4 backdrop-blur-lg lg:hidden">
           <div className="flex flex-col items-start gap-4">
               <div className="flex w-full flex-col gap-4">
                 <div className="flex flex-col gap-2">
-                  <Link href="/Home">
+                  <Link href="/">
                     <Button
                       variant="link"
                       className="flex w-full items-center justify-center p-0 text-sm text-background"
@@ -168,7 +148,7 @@ const Navbar = () => {
                       <span>Home</span>
                     </Button>
                   </Link>
-                  <Link href="/About">
+                  <Link href="/about">
                     <Button
                       variant="link"
                       className="flex w-full items-center justify-center p-0 text-sm text-background"
@@ -186,7 +166,7 @@ const Navbar = () => {
                       <span>Product</span>
                     </Button>
                   </Link>
-                  <Link href="/services">
+                  <div className="flex flex-col gap-2">
                     <Button
                       variant="link"
                       className="flex w-full items-center justify-center p-0 text-sm text-background"
@@ -194,7 +174,23 @@ const Navbar = () => {
                     >
                       <span>Services</span>
                     </Button>
-                  </Link>
+                    {openSubMenu === "Services" && (
+                      <div className="ml-4 flex flex-col gap-2">
+                        <Link
+                          href="/services/market-research-for-agri-brands"
+                          className="text-sm text-background hover:font-bold"
+                        >
+                          Market Research and Campaign Execution
+                        </Link>
+                        <Link
+                          href="/services/performance-marketing-for-agri-brands"
+                          className="text-sm text-background hover:font-bold"
+                        >
+                          Performance Marketing and SEO Services
+                        </Link>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             <Link className="h-full w-full" href="mailto:connect@digicides.com">
