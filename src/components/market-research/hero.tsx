@@ -13,7 +13,9 @@ export default function MarketResearchHero() {
     </h1>
 
     <div className="block xl:hidden">
-      <RightElementMobile />
+    <div className="-ml-16">
+        <Image src="/market-research/market-research-hero.png" alt="Right Element" width={600} height={600} />
+      </div>
     </div>
     <div className="flex flex-row">
       <div className="flex w-full flex-col gap-10 py-4 pt-16">

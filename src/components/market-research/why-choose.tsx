@@ -10,30 +10,26 @@ export default function WhyChooseDigicides() {
           {/* <p className="text-center text-sm font-normal text-muted-foreground">
           Digicides is driven by a team of industry experts with deep experience in agritech, rural marketing, software development, and research. Our leadership brings a unique blend of technology and market expertise to revolutionize agri-business engagement
           </p> */}
-          <div className="h-[1px] w-full bg-border" />
+          {/* <div className="h-[1px] w-full bg-border" /> */}
           <div className="flex w-full flex-col gap-3">
             <div className="flex w-full flex-col gap-3 md:flex-row">
               <MarketCard
-                title="Saswati Bag"
-                text="12 years of experience in research & consulting (agriculture). Currently oversees operations at Digicides. MBA graduate from IIMT"
-                imagePath="/images/team/saswati.png"
+                text="Specialized in agri audience segmentation having seamless multichannel approach: SMS, Meta, WhatsApp, Telegram"
+                imagePath="/images/built-for-agri-marketing.png"
               />
               <MarketCard
-                title="Dean Dutta"
-                text="17 years of experience in rural sales & marketing. Previously held key roles at startups like Zipdial & Knowlarity. MBA graduate from UIUC"
-                imagePath="/images/team/dean.png"
+                text="Rich Digicides Data to support hyper-targeted research in Agri Industry"
+                imagePath="/images/seamless-integration.png"
               />
             </div>
             <div className="flex w-full flex-col gap-3 md:flex-row">
               <MarketCard
-                title="Shailendra Singh"
-                text=" IIT Kanpur with 12+ years in agritech. Previously Co-Founder at Yuktix and worked with Thinvent & Silverline Design INC"
-                imagePath="/images/team/shailendra.png"
+                text="Expertise in market research, survey marketing, and digital execution"
+                imagePath="/images/scalable-and-cost-effective.png"
               />
               <MarketCard
-                title="Rajeev Jha"
-                text="IIT Kanpur & IIM Bangalore alumnus with 25 years in software development. Previously Founder at Yuktix and worked with Citrix, AOL, Oracle & Indigene"
-                imagePath="/images/team/rajeev.png"
+                text="Real-time dashboards and farmer-friendly survey formats"
+                imagePath="/images/end-to-end-marketing-support.png"
               />
             </div>
           </div>

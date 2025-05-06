@@ -45,11 +45,24 @@ export default function MarketResearchAndCampaignExecution() {
         <div className="h-[1px] w-full bg-border" />
         <div className="flex flex-col gap-10 text-center">
           • Audience-Centric Data Collection • Defining Your Campaign Objectives
-          • Channel Planning & Strategy <br/> • Campaign Execution & Automation •
-          Insightful Reporting & Feedback Loop
+          • Channel Planning & Strategy <br /> • Campaign Execution & Automation
+          • Insightful Reporting & Feedback Loop
         </div>
       </div>
       <WhyChooseDigicides />
+      <div className="flex flex-col gap-5  -mb-44">
+      <h1 className="text-center text-3xl sm:text-4xl">
+        Ready to Know{" "}
+        <span className="rounded-md bg-primary/10 px-2 text-primary">
+          Your Market ?
+        </span>
+      </h1>
+      <p className="text-md text-center font-normal text-muted-foreground">
+        <b>Let&apos;s Build Research-Driven Campaigns That Deliver Actionable Insights.</b>
+        <br /> Combine data collection with communication and drive real growth
+        for your agri brand.
+      </p>
+      </div>
       <ContactUs />
     </div>
   );

@@ -2,11 +2,9 @@ import Image from "next/image";
 import React from "react";
 
 const MarketCard = ({
-  title,
   text,
   imagePath,
 }: {
-  title: string;
   text: string;
   imagePath: string;
 }) => {
@@ -15,13 +13,12 @@ const MarketCard = ({
       <div className="relative col-span-1 ">
         <Image 
           src={imagePath} 
-          alt={title} 
+          alt={imagePath} 
           fill
           className="object-contain rounded-lg" 
         />
       </div>
-      <div className="flex flex-col text-left ml-2 col-span-2">
-        {/* <h3 className="text-xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl font-medium text-primary">{title}</h3> */}
+      <div className="flex flex-col text-left ml-2 col-span-2 items-center justify-center">
         <p className="text-md mt-2 text-gray-600">
           {text}
         </p>
