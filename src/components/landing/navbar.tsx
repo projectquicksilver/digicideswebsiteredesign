@@ -110,13 +110,13 @@ const Navbar = () => {
                       {openSubMenu === "Services" && (
                         <div className="absolute left-0 mt-6 min-w-[350px] flex-col rounded-md bg-black/80 p-4 gap-4">
                           <Link
-                            href="/services/market-research-and-campaign-execution-for-agri-brands"
+                            href="/services/market-research-for-agri-brands"
                             className="block px-3 py-1 text-sm text-background hover:font-bold"
                           >
                             Market Research and Campaign Execution
                           </Link>
                           <Link
-                            href="/services/performance-marketing-and-seo-services-for-agri-brands"
+                            href="/services/performance-marketing-for-agri-brands"
                             className="block px-3 py-1 text-sm text-background hover:font-bold"
                           >
                             Performance Marketing and SEO Services
