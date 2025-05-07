@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import { type Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,37 +27,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  other: {
-    "application/ld+json": JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Digicides Marketing Services Pvt. Ltd.",
-      "url": "https://www.digicides.com",
-      "logo": "https://www.digicides.com/Logo.png",
-      "description": "A SaaS-powered marketing and communication platform for the agriculture industry, helping agribusinesses connect with farmers through data-driven campaigns.",
-      "sameAs": [
-        "https://www.facebook.com/digicides.in",
-        "https://www.instagram.com/digicides",
-        "https://www.linkedin.com/company/digicides"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-8447302576",
-        "contactType": "Customer Support",
-        "areaServed": "IN",
-        "availableLanguage": "en",
-        "email": "connect@digicides.com"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Your Street Address",
-        "addressLocality": "City",
-        "addressRegion": "State",
-        "postalCode": "ZIP Code",
-        "addressCountry": "IN"
-      }
-    }),
-  },
 };
 
 export default function RootLayout({
@@ -64,6 +34,43 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.className}`} suppressHydrationWarning>
+      <head>
+        <Script
+          id="schema-org"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Digicides Marketing Services Pvt. Ltd.",
+              "url": "https://www.digicides.com",
+              "logo": "https://www.digicides.com/Logo.png",
+              "description": "A SaaS-powered marketing and communication platform for the agriculture industry, helping agribusinesses connect with farmers through data-driven campaigns.",
+              "sameAs": [
+                "https://www.facebook.com/digicides.in",
+                "https://www.instagram.com/digicides",
+                "https://www.linkedin.com/company/digicides"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-8447302576",
+                "contactType": "Customer Support",
+                "areaServed": "IN",
+                "availableLanguage": "en",
+                "email": "connect@digicides.com"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Your Street Address",
+                "addressLocality": "City",
+                "addressRegion": "State",
+                "postalCode": "ZIP Code",
+                "addressCountry": "IN"
+              }
+            })
+          }}
+        />
+      </head>
       <body
         suppressHydrationWarning
         className={`  bg-background font-sans antialiased ${inter.className}`}

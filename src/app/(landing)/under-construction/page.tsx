@@ -1,3 +1,12 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
 const UnderConstructionPage = () => {
   return (
     <main className="flex h-screen items-center justify-center bg-white text-center">

@@ -17,13 +17,6 @@ const Navbar = () => {
 
   console.log(openSubMenu);
 
-  const MENU_ITEMS = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Product", href: "/product" },
-    { name: "Services", href: "/services" },
-  ];
-
   const toggleSubMenu = (name: string) => {
     setOpenSubMenu((prev) => (prev === name ? null : name));
   };
@@ -62,21 +55,64 @@ const Navbar = () => {
             <div className="ml-4 hidden items-center lg:flex">
               <NavigationMenu>
                 <NavigationMenuList>
-                  {MENU_ITEMS.map((item) => (
-                    <NavigationMenuItem key={item.name}>
-                      <Link
-                        href={item.href}
+                  <NavigationMenuItem>
+                    <Link
+                      href="/"
+                      className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
+                    >
+                      Home
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <Link
+                      href="/about"
+                      className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
+                    >
+                      About
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <Link
+                      href="/product"
+                      className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
+                    >
+                      Product
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <div className="relative gap-5">
+                      <button
+                        onClick={() => toggleSubMenu("Services")}
                         className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
                       >
-                        {item.name}
-                      </Link>
-                    </NavigationMenuItem>
-                  ))}
+                        Services
+                      </button>
+                      {openSubMenu === "Services" && (
+                        <div className="absolute left-0 mt-6 min-w-[350px] flex-col rounded-md bg-black/80 p-4 gap-4">
+                          <Link
+                            href="/services/market-research-for-agri-brands"
+                            className="block px-3 py-1 text-sm text-background hover:font-bold"
+                          >
+                            Market Research and Campaign Execution
+                          </Link>
+                          <Link
+                            href="/services/performance-marketing-for-agri-brands"
+                            className="block px-3 py-1 text-sm text-background hover:font-bold"
+                          >
+                            Performance Marketing and SEO Services
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+                  </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
             </div>
             <div className="flex h-[51px] items-center justify-center space-x-2">
-              <Link className="h-full w-[200px] hidden lg:block" href="mailto:connect@digicides.com">
+              <Link
+                className="hidden h-full w-[200px] lg:block"
+                href="mailto:connect@digicides.com"
+              >
                 <Button variant="default" className="h-full w-full">
                   <span className="text-lg text-black">Get in touch ↗ </span>
                 </Button>
@@ -99,25 +135,64 @@ const Navbar = () => {
       </header>
 
       {isOpen && (
-        <div className="fixed h-1/3 inset-0 top-20 z-[199] mx-4 rounded-[44px] bg-black/80 p-4 backdrop-blur-lg lg:hidden">
+        <div className="fixed inset-0 top-20 z-[199] mx-4 h-fit rounded-[44px] bg-black/80 p-4 backdrop-blur-lg lg:hidden">
           <div className="flex flex-col items-start gap-4">
-            {MENU_ITEMS.map((item) => (
-              <div className="flex w-full flex-col gap-4" key={item.name}>
+              <div className="flex w-full flex-col gap-4">
                 <div className="flex flex-col gap-2">
-                  <Link
-                    href={item.href}
-                  >
+                  <Link href="/">
                     <Button
-                    variant="link"
-                    className="flex w-full items-center justify-center p-0 text-sm text-background"
-                    onClick={() => toggleSubMenu(item.name)}
-                  >
-                    <span>{item.name}</span>
-                  </Button>
+                      variant="link"
+                      className="flex w-full items-center justify-center p-0 text-sm text-background"
+                      onClick={() => toggleSubMenu("Home")}
+                    >
+                      <span>Home</span>
+                    </Button>
                   </Link>
+                  <Link href="/about">
+                    <Button
+                      variant="link"
+                      className="flex w-full items-center justify-center p-0 text-sm text-background"
+                      onClick={() => toggleSubMenu("About")}
+                    >
+                      <span>About</span>
+                    </Button>
+                  </Link>
+                  <Link href="/product">
+                    <Button
+                      variant="link"
+                      className="flex w-full items-center justify-center p-0 text-sm text-background"
+                      onClick={() => toggleSubMenu("Product")}
+                    >
+                      <span>Product</span>
+                    </Button>
+                  </Link>
+                  <div className="flex flex-col gap-2">
+                    <Button
+                      variant="link"
+                      className="flex w-full items-center justify-center p-0 text-sm text-background"
+                      onClick={() => toggleSubMenu("Services")}
+                    >
+                      <span>Services</span>
+                    </Button>
+                    {openSubMenu === "Services" && (
+                      <div className="ml-4 flex flex-col gap-2">
+                        <Link
+                          href="/services/market-research-for-agri-brands"
+                          className="text-sm text-background hover:font-bold"
+                        >
+                          Market Research and Campaign Execution
+                        </Link>
+                        <Link
+                          href="/services/performance-marketing-for-agri-brands"
+                          className="text-sm text-background hover:font-bold"
+                        >
+                          Performance Marketing and SEO Services
+                        </Link>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
-            ))}
             <Link className="h-full w-full" href="mailto:connect@digicides.com">
               <Button variant="default" className="h-full w-full">
                 <span className="text-lg text-black">Get in touch ↗ </span>
