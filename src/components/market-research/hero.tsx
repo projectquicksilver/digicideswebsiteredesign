@@ -1,12 +1,11 @@
 import { Button } from "@/components/ui/button";
-import PixelBg from "@/components/ui/pixel-bg";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function MarketResearchHero() {
     return (
     <section className="container relative flex flex-col items-center gap-2 text-center text-foreground">
-    <PixelBg />
+    {/* <PixelBg /> */}
     <h1 className="z-10 text-2xl font-normal tracking-tighter text-black sm:text-4xl md:text-5xl lg:leading-[1.1]">
       Market Research & Campaign Execution for Agri Brands
     </h1>
@@ -18,7 +17,7 @@ export default function MarketResearchHero() {
     </div>
     <div className="flex flex-row">
       <div className="flex w-full flex-col gap-10 py-4 pt-16">
-        <div className="sm:text-left md:text-left lg:text-left xl:text-left 2xl:text-left 3xl:text-left 4xl:text-left 5xl:text-left 6xl:text-left 7xl:text-left 8xl:text-left 9xl:text-left 10xl:text-left text-center pt-20">
+        <div className="xl:text-left 2xl:text-left 3xl:text-left 4xl:text-left 5xl:text-left 6xl:text-left 7xl:text-left 8xl:text-left 9xl:text-left 10xl:text-left text-center pt-20">
           <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light tracking-tighter text-muted-foreground">
             Know Your <br/> Audience
           </h2>
@@ -45,7 +44,7 @@ export default function MarketResearchHero() {
           </Button>
         </Link>
       </div>
-      <div className="3xl:block 4xl:block 5xl:block 6xl:block 7xl:block 8xl:block 9xl:block 10xl:block">
+      <div className="hidden xl:block 2xl:block 3xl:block 4xl:block 5xl:block 6xl:block 7xl:block 8xl:block 9xl:block 10xl:block">
         <div className="right-0 -mr-20 mt-20">
           <Image
             src="/market-research/market-research-hero.png"
