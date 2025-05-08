@@ -43,10 +43,12 @@ export default function MarketResearchAndCampaignExecution() {
           campaigns designed to collect data and create engagement—at scale.
         </p>
         <div className="h-[1px] w-full bg-border" />
-        <div className="flex flex-col gap-10 text-center">
-          • Audience-Centric Data Collection • Defining Your Campaign Objectives
-          • Channel Planning & Strategy <br /> • Campaign Execution & Automation
-          • Insightful Reporting & Feedback Loop
+        <div className="flex flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row 2xl:flex-row 3xl:flex-row 4xl:flex-row 5xl:flex-row 6xl:flex-row 7xl:flex-row 8xl:flex-row 9xl:flex-row 10xl:flex-row gap-10 text-center tracking-wider px-2">
+          <h2><text className="text-orange-500">•</text> Audience-Centric Data Collection</h2>
+          <h2><text className="text-orange-500">•</text> Defining Your Campaign Objectives</h2>
+          <h2><text className="text-orange-500">•</text> Channel Planning & Strategy </h2 > 
+          <h2><text className="text-orange-500">•</text> Campaign Execution & Automation</h2>
+          <h2><text className="text-orange-500">•</text> Insightful Reporting & Feedback Loop</h2>
         </div>
       </div>
       <WhyChooseDigicides />
