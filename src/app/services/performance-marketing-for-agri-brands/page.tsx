@@ -1,16 +1,117 @@
 import ContactUs from "@/components/landing/contact-us";
 import OurCustomers from "@/components/landing/our-customers";
+import PixelBg from "@/components/ui/pixel-bg";
+import Head from 'next/head';
+import Image from "next/image";
 
 
 export default function PerformanceMarketingAndSeoServices() {
   return (
     <div>
+      <Head>
+        <title>Performance Marketing & SEO Services for Agri Brands | Digicides</title>
+        <meta name="description" content="Boost your agri business with Google Ads, Facebook campaigns, and SEO services. Get more leads, visibility & growth with Digicides' digital marketing experts." />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Performance Marketing & SEO Services for Agri Brands",
+              "description": "Boost your agri business with targeted digital marketing—Google Ads, SEO, and social media campaigns built for agriculture brands.",
+              "url": "https://digicides.com/performance-marketing"
+            }
+          `}
+        </script>
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "serviceType": "Performance Marketing & SEO Services",
+              "provider": {
+                "@type": "Organization",
+                "name": "Digicides Marketing Services Pvt. Ltd."
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "India"
+              },
+              "description": "SEO, social media marketing, Google Ads, and lead generation services tailored for the agriculture industry."
+            }
+          `}
+        </script>
+      </Head>
+      <section className="relative min-h-screen pb-20 px-4 sm:px-6 lg:px-8">
+        <PixelBg />
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col justify-center items-center">
+            <p className="text-lg md:text-2xl max-w-2xl text-center text-foreground mb-8">
+              Reach the Right Farmers. Maximize Every Rupee.
+            </p>
+            <div className="flex flex-col items-center justify-center text-center">
+              <h1 className="text-4xl max-w-xl lg:max-w-3xl md:text-5xl lg:text-6xl font-medium text-muted-foreground text-center mb-4">
+                From Fields to Feeds: <span className="text-primary">
+                  Grow Your Agri Brand with Digital Marketing
+                </span>
+              </h1>
+              <p className="text-lg max-w-2xl text-center text-muted-foreground mb-8">
+                Digicides offers ROI-driven performance marketing, SEO services, and social media marketing—crafted exclusively for agri businesses.
+              </p>
+              <button className="bg-foreground text-background font-medium py-3 px-8 rounded-full">
+                Get in touch
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex md:flex-row flex-col w-full items-center">
+            <Image
+              src="/performance-marketing/Performance-Marketing-1.png"
+              width={540}
+              height={300}
+              alt="Traditional marketing vs digital marketing"
+              className="w-auto h-[320px] rounded-lg mb-4"
+            />
+            <div className="w-full">
+              <h1 className="text-center mb-6 text-3xl sm:text-4xl">
+                Traditional Outreach is {" "}
+                <span className="rounded-md bg-primary/10 px-2 text-primary">
+                  Outdated
+                </span>
+              </h1>
+              <div className="bg-muted-foreground/30 mb-6 h-[1px] w-full" />
+              <p className="text-lg text-center text-muted-foreground mb-4">
+                Agri brands used to rely on field visits and pamphlets. But 85% of rural buyers now research products online before purchase. Today's farmers are on Google, YouTube, Facebook, and Instagram.
+              </p>
+              <p className="text-lg text-center text-muted-foreground mb-4">
+                Digital marketing helps you reach them with precision, track every rupee spent, and deliver stronger ROI.
+              </p>
+              <p className="text-lg text-center font-medium text-[#2A2A2A]">
+                If your competitors are online—you need to be ahead.
+              </p>
+            </div>
+            <Image
+              src="/performance-marketing/Performance-Marketing-2.png"
+              width={540}
+              height={300}
+              alt="Traditional marketing vs digital marketing"
+              className="w-auto h-[320px] rounded-lg mb-4"
+            />
+          </div>
+        </div>
+      </section>
       <OurCustomers />
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-medium md:text-4xl text-center text-foreground mb-12">
-            Performance Marketing & SEO, Built for Agri Brands
-          </h2>
+          <h1 className="text-center mb-6 text-3xl sm:text-4xl">
+            Performance Marketing & SEO, Built for{" "}
+            <span className="rounded-md bg-primary/10 px-2 text-primary">
+              Agri Brands
+            </span>
+          </h1>
           <p className="text-center text-muted-foreground mb-12 max-w-5xl mx-auto">
             We turn agri marketing into measurable results with custom Google and Meta ad campaigns, SEO, and lead generation—all tuned to your region, crop cycle, and buyer behavior.
           </p>
@@ -56,9 +157,16 @@ export default function PerformanceMarketingAndSeoServices() {
       {/* Section 3: Our Process */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-medium md:text-4xl text-center text-foreground mb-12">
-            Smart Strategy. Strong Results.
-          </h2>
+          <h1 className="text-center mb-6 text-3xl sm:text-4xl">
+            Smart{" "}
+            <span className="rounded-md bg-primary/10 px-2 text-primary">
+              Strategy
+            </span>
+            {" "}Strong{" "}
+            <span className="rounded-md bg-primary/10 px-2 text-primary">
+              Results
+            </span>
+          </h1>
           <p className="text-center text-muted-foreground mb-12 max-w-5xl mx-auto">
             Our process ensures every rupee you spend delivers value—whether it's visibility, engagement, or verified leads.
           </p>
@@ -86,7 +194,7 @@ export default function PerformanceMarketingAndSeoServices() {
               }
             ].map((step, index) => (
               <div key={index} className="relative mb-8 md:mb-0 md:flex-1">
-                <div className="border-l-4 border-[#FEF4E8] pl-4 md:border-l-0 md:border-t-4 md:pt-4 md:pl-0">
+                <div className="border-l-4 border-[#FEF4E8] pl-8 md:border-l-0 md:border-t-4 md:pt-4 md:pl-0">
                   <div className="absolute top-0 -left-3 md:-top-3 md:left-0 bg-[#FEF4E8] text-foreground text-sm font-medium rounded-full size-9 flex items-center justify-center">
                     {step.step}
                   </div>
@@ -102,9 +210,12 @@ export default function PerformanceMarketingAndSeoServices() {
       </section>
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-medium md:text-4xl text-center text-foreground mb-6">
-            Services We Offer
-          </h2>
+          <h1 className="text-center mb-6 text-3xl sm:text-4xl">
+            Services We{" "}
+            <span className="rounded-md bg-primary/10 px-2 text-primary">
+              Offer
+            </span>
+          </h1>
           <p className="text-center text-muted-foreground mb-12 max-w-5xl mx-auto">We turn agri marketing into measurable results with custom Google and Meta ad campaigns, SEO, and lead generation — All-in-One Digital Growth Suite.</p>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="p-8 rounded-xl">
@@ -147,10 +258,12 @@ export default function PerformanceMarketingAndSeoServices() {
       </section>
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-medium md:text-4xl text-center text-foreground mb-12">
-            We Know Agri. We Deliver Results.
-          </h2>
-
+          <h1 className="text-center mb-6 text-3xl sm:text-4xl">
+            We Know Agri. We Deliver {" "}
+            <span className="rounded-md bg-primary/10 px-2 text-primary">
+              Results.
+            </span>
+          </h1>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
@@ -188,10 +301,12 @@ export default function PerformanceMarketingAndSeoServices() {
       </section>
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-medium md:text-4xl text-center text-foreground mb-12">
-            Real Results with Real Impact
-          </h2>
-
+          <h1 className="text-center mb-6 text-3xl sm:text-4xl">
+            Real Results with Real {" "}
+            <span className="rounded-md bg-primary/10 px-2 text-primary">
+              Impact
+            </span>
+          </h1>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
@@ -219,6 +334,15 @@ export default function PerformanceMarketingAndSeoServices() {
           </div>
         </div>
       </section>
+      <div className="flex flex-col gap-4 -mb-8 md:-mb-36">
+        <h1 className="text-center text-3xl sm:text-4xl">
+          Let&apos;s Start Your Digital Growth {" "}
+          <span className="rounded-md bg-primary/10 px-2 text-primary">
+            Journey
+          </span>
+        </h1>
+        <p className="text-center text-muted-foreground max-w-5xl mx-auto">We turn agri marketing into measurable results with custom Google and Meta ad campaigns, SEO, and lead generation — All-in-One Digital Growth Suite.</p>
+      </div>
       <ContactUs />
     </div>
   )
