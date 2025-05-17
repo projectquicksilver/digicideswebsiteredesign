@@ -84,7 +84,7 @@ export default function PerformanceMarketingAndSeoServices() {
               </h1>
               <div className="bg-muted-foreground/30 mb-6 h-[1px] w-full" />
               <p className="text-lg text-center text-muted-foreground mb-4">
-                Agri brands used to rely on field visits and pamphlets. But 85% of rural buyers now research products online before purchase. Today's farmers are on Google, YouTube, Facebook, and Instagram.
+                Agri brands used to rely on field visits and pamphlets. But 85% of rural buyers now research products online before purchase. Today&apos;s farmers are on Google, YouTube, Facebook, and Instagram.
               </p>
               <p className="text-lg text-center text-muted-foreground mb-4">
                 Digital marketing helps you reach them with precision, track every rupee spent, and deliver stronger ROI.
@@ -168,7 +168,7 @@ export default function PerformanceMarketingAndSeoServices() {
             </span>
           </h1>
           <p className="text-center text-muted-foreground mb-12 max-w-5xl mx-auto">
-            Our process ensures every rupee you spend delivers value—whether it's visibility, engagement, or verified leads.
+            Our process ensures every rupee you spend delivers value—whether it&apos;s visibility, engagement, or verified leads.
           </p>
           <div className="flex flex-col md:flex-row">
             {[
