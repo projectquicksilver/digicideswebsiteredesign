@@ -1,54 +1,69 @@
 import ContactUs from "@/components/landing/contact-us";
 import OurCustomers from "@/components/landing/our-customers";
 import PixelBg from "@/components/ui/pixel-bg";
-import Head from 'next/head';
 import Image from "next/image";
+
+export const metadata = {
+  title: "Performance Marketing & SEO Services for Agri Brands | Digicides",
+  description:
+    "Boost your agri business with Google Ads, Facebook campaigns, and SEO services. Get more leads, visibility & growth with Digicides' digital marketing experts.",
+  alternates: {
+    canonical: "https://digicides.com/performance-marketing-for-agri-brands"
+  },
+  openGraph: {
+    title: "Performance Marketing & SEO Services for Agri Brands | Digicides",
+    description:
+      "Boost your agri business with Google Ads, Facebook campaigns, and SEO services. Get more leads, visibility & growth with Digicides' digital marketing experts.",
+    url: "https://digicides.com/performance-marketing-for-agri-brands",
+    siteName: "Digicides",
+    locale: "en_IN",
+    type: "website"
+  }
+};
 
 
 export default function PerformanceMarketingAndSeoServices() {
   return (
     <div>
-      <Head>
-        <title>Performance Marketing & SEO Services for Agri Brands | Digicides</title>
-        <meta name="description" content="Boost your agri business with Google Ads, Facebook campaigns, and SEO services. Get more leads, visibility & growth with Digicides' digital marketing experts." />
-        <script type="application/ld+json">
-          {`
+      <script type="application/ld+json">
+        {`
             {
               "@context": "https://schema.org",
               "@type": "WebPage",
               "name": "Performance Marketing & SEO Services for Agri Brands",
               "description": "Boost your agri business with targeted digital marketing—Google Ads, SEO, and social media campaigns built for agriculture brands.",
-              "url": "https://digicides.com/performance-marketing"
+              "url": "https://digicides.com/performance-marketing-for-agri-brands"
             }
           `}
-        </script>
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Service",
-              "serviceType": "Performance Marketing & SEO Services",
-              "provider": {
-                "@type": "Organization",
-                "name": "Digicides Marketing Services Pvt. Ltd."
-              },
-              "areaServed": {
-                "@type": "Country",
-                "name": "India"
-              },
-              "description": "SEO, social media marketing, Google Ads, and lead generation services tailored for the agriculture industry."
-            }
-          `}
-        </script>
-      </Head>
-      <section className="relative min-h-screen pb-20 px-4 sm:px-6 lg:px-8">
+      </script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            serviceType: "Performance Marketing & SEO Services",
+            provider: {
+              "@type": "Organization",
+              name: "Digicides Marketing Services Pvt. Ltd."
+            },
+            areaServed: {
+              "@type": "Country",
+              name: "India"
+            },
+            description:
+              "SEO, social media marketing, Google Ads, and lead generation services tailored for the agriculture industry."
+          })
+        }}
+      />
+      <section className="relative min-h-screen pt-8 px-4 sm:px-6 lg:px-8">
         <PixelBg />
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center gap-8 items-center">
             <p className="text-lg md:text-2xl max-w-2xl text-center text-foreground mb-8">
               Reach the Right Farmers. Maximize Every Rupee.
             </p>
-            <div className="flex flex-col items-center justify-center text-center">
+            <div className="flex flex-col items-center justify-center gap-8 text-center">
               <h1 className="text-4xl max-w-xl lg:max-w-3xl md:text-5xl lg:text-6xl font-medium text-muted-foreground text-center mb-4">
                 From Fields to Feeds: <span className="text-primary">
                   Grow Your Agri Brand with Digital Marketing
@@ -76,12 +91,12 @@ export default function PerformanceMarketingAndSeoServices() {
               className="w-auto h-[320px] rounded-lg mb-4"
             />
             <div className="w-full">
-              <h1 className="text-center mb-6 text-3xl sm:text-4xl">
+              <h2 className="text-center mb-6 text-3xl sm:text-4xl">
                 Traditional Outreach is {" "}
                 <span className="rounded-md bg-primary/10 px-2 text-primary">
                   Outdated
                 </span>
-              </h1>
+              </h2>
               <div className="bg-muted-foreground/30 mb-6 h-[1px] w-full" />
               <p className="text-lg text-center text-muted-foreground mb-4">
                 Agri brands used to rely on field visits and pamphlets. But 85% of rural buyers now research products online before purchase. Today&apos;s farmers are on Google, YouTube, Facebook, and Instagram.
@@ -106,12 +121,12 @@ export default function PerformanceMarketingAndSeoServices() {
       <OurCustomers />
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-center mb-6 text-3xl sm:text-4xl">
+          <h2 className="text-center mb-6 text-3xl sm:text-4xl">
             Performance Marketing & SEO, Built for{" "}
             <span className="rounded-md bg-primary/10 px-2 text-primary">
               Agri Brands
             </span>
-          </h1>
+          </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-5xl mx-auto">
             We turn agri marketing into measurable results with custom Google and Meta ad campaigns, SEO, and lead generation—all tuned to your region, crop cycle, and buyer behavior.
           </p>
@@ -157,7 +172,7 @@ export default function PerformanceMarketingAndSeoServices() {
       {/* Section 3: Our Process */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-center mb-6 text-3xl sm:text-4xl">
+          <h2 className="text-center mb-6 text-3xl sm:text-4xl">
             Smart{" "}
             <span className="rounded-md bg-primary/10 px-2 text-primary">
               Strategy
@@ -166,7 +181,7 @@ export default function PerformanceMarketingAndSeoServices() {
             <span className="rounded-md bg-primary/10 px-2 text-primary">
               Results
             </span>
-          </h1>
+          </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-5xl mx-auto">
             Our process ensures every rupee you spend delivers value—whether it&apos;s visibility, engagement, or verified leads.
           </p>
@@ -210,12 +225,12 @@ export default function PerformanceMarketingAndSeoServices() {
       </section>
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-center mb-6 text-3xl sm:text-4xl">
+          <h2 className="text-center mb-6 text-3xl sm:text-4xl">
             Services We{" "}
             <span className="rounded-md bg-primary/10 px-2 text-primary">
               Offer
             </span>
-          </h1>
+          </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-5xl mx-auto">We turn agri marketing into measurable results with custom Google and Meta ad campaigns, SEO, and lead generation — All-in-One Digital Growth Suite.</p>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="p-8 rounded-xl">
@@ -258,12 +273,12 @@ export default function PerformanceMarketingAndSeoServices() {
       </section>
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-center mb-6 text-3xl sm:text-4xl">
+          <h2 className="text-center mb-6 text-3xl sm:text-4xl">
             We Know Agri. We Deliver {" "}
             <span className="rounded-md bg-primary/10 px-2 text-primary">
               Results.
             </span>
-          </h1>
+          </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
@@ -301,12 +316,12 @@ export default function PerformanceMarketingAndSeoServices() {
       </section>
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-center mb-6 text-3xl sm:text-4xl">
+          <h2 className="text-center mb-6 text-3xl sm:text-4xl">
             Real Results with Real {" "}
             <span className="rounded-md bg-primary/10 px-2 text-primary">
               Impact
             </span>
-          </h1>
+          </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
@@ -335,12 +350,12 @@ export default function PerformanceMarketingAndSeoServices() {
         </div>
       </section>
       <div className="flex flex-col gap-4 -mb-8 md:-mb-36">
-        <h1 className="text-center text-3xl sm:text-4xl">
+        <h2 className="text-center text-3xl sm:text-4xl">
           Let&apos;s Start Your Digital Growth {" "}
           <span className="rounded-md bg-primary/10 px-2 text-primary">
             Journey
           </span>
-        </h1>
+        </h2>
         <p className="text-center text-muted-foreground max-w-5xl mx-auto">We turn agri marketing into measurable results with custom Google and Meta ad campaigns, SEO, and lead generation — All-in-One Digital Growth Suite.</p>
       </div>
       <ContactUs />

@@ -3,9 +3,58 @@ import MarketResearchHero from "@/components/market-research/hero";
 import WhyChooseDigicides from "@/components/market-research/why-choose";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Market Research & Survey Marketing for Agri Brands | Digicides",
+  description:
+    "Gather insights with Digicides' market research and survey marketing for agri brands. Capture farmer data via SMS, WhatsApp, and digital surveys.",
+  alternates: {
+    canonical: "https://digicides.com/market-research-for-agri-brands"
+  },
+  openGraph: {
+    title: "Market Research & Survey Marketing for Agri Brands | Digicides",
+    description:
+      "Gather insights with Digicides' market research and survey marketing for agri brands. Capture farmer data via SMS, WhatsApp, and digital surveys.",
+    url: "https://digicides.com/market-research-for-agri-brands",
+    siteName: "Digicides",
+    locale: "en_IN",
+    type: "website"
+  }
+};
+
 export default function MarketResearchAndCampaignExecution() {
   return (
     <div className="flex flex-col gap-20">
+      <script type="application/ld+json">
+        {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Market Research & Survey Marketing for Agri Brands | Digicides",
+              "description": "Gather insights with Digicides' market research and survey marketing for agri brands. Capture farmer data via SMS, WhatsApp, and digital surveys.",
+              "url": "https://digicides.com/market-research-for-agri-brands"
+            }
+          `}
+      </script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            serviceType: "Market Research & Survey Marketing for Agri Brands | Digicides",
+            provider: {
+              "@type": "Organization",
+              name: "Digicides Marketing Services Pvt. Ltd."
+            },
+            areaServed: {
+              "@type": "Country",
+              name: "India"
+            },
+            description:
+              "Gather insights with Digicides' market research and survey marketing for agri brands. Capture farmer data via SMS, WhatsApp, and digital surveys."
+          })
+        }}
+      />
       <MarketResearchHero />
       <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-20 text-foreground sm:pt-32 md:px-24 md:pt-32 lg:pt-32 xl:px-44 xl:pt-32 2xl:pt-32">
         <h1 className="text-center text-3xl sm:text-4xl">
@@ -23,13 +72,6 @@ export default function MarketResearchAndCampaignExecution() {
           digital engagement, letting you gather data while building brand
           awareness.
         </p>
-        <Image
-          src="/market-research/market-research-dashboard.png"
-          alt="Market Research Dashboard"
-          width={1000}
-          height={1000}
-          className="my-10"
-        />
       </div>
       <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-20 text-foreground sm:pt-32 md:px-24 md:pt-32 lg:pt-32 xl:px-44 xl:pt-32 2xl:pt-32">
         <h1 className="text-center text-2xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl">
@@ -42,28 +84,35 @@ export default function MarketResearchAndCampaignExecution() {
           We turn traditional market research surveys into powerful digital
           campaigns designed to collect data and create engagement—at scale.
         </p>
+        <Image
+          src="/market-research/market-research-dashboard.png"
+          alt="Market Research Dashboard"
+          width={1000}
+          height={1000}
+          className="my-10"
+        />
         <div className="h-[1px] w-full bg-border" />
         <div className="flex flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row 2xl:flex-row 3xl:flex-row 4xl:flex-row 5xl:flex-row 6xl:flex-row 7xl:flex-row 8xl:flex-row 9xl:flex-row 10xl:flex-row gap-10 text-center tracking-wider px-2">
           <h2><text className="text-orange-500">•</text> Audience-Centric Data Collection</h2>
           <h2><text className="text-orange-500">•</text> Defining Your Campaign Objectives</h2>
-          <h2><text className="text-orange-500">•</text> Channel Planning & Strategy </h2 > 
+          <h2><text className="text-orange-500">•</text> Channel Planning & Strategy </h2 >
           <h2><text className="text-orange-500">•</text> Campaign Execution & Automation</h2>
           <h2><text className="text-orange-500">•</text> Insightful Reporting & Feedback Loop</h2>
         </div>
       </div>
       <WhyChooseDigicides />
       <div className="flex flex-col gap-5  -mb-44">
-      <h1 className="text-center text-3xl sm:text-4xl">
-        Ready to Know{" "}
-        <span className="rounded-md bg-primary/10 px-2 text-primary">
-          Your Market ?
-        </span>
-      </h1>
-      <p className="text-md text-center font-normal text-muted-foreground">
-        <b>Let&apos;s Build Research-Driven Campaigns That Deliver Actionable Insights.</b>
-        <br /> Combine data collection with communication and drive real growth
-        for your agri brand.
-      </p>
+        <h1 className="text-center text-3xl sm:text-4xl">
+          Ready to Know{" "}
+          <span className="rounded-md bg-primary/10 px-2 text-primary">
+            Your Market ?
+          </span>
+        </h1>
+        <p className="text-md text-center font-normal text-muted-foreground">
+          <b>Let&apos;s Build Research-Driven Campaigns That Deliver Actionable Insights.</b>
+          <br /> Combine data collection with communication and drive real growth
+          for your agri brand.
+        </p>
       </div>
       <ContactUs />
     </div>
