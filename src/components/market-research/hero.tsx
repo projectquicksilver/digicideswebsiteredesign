@@ -37,7 +37,7 @@ export default function MarketResearchHero() {
             <Button
               variant="secondary"
               size="lg"
-              className="h-full w-full text-md sm:text-xl md:text-xl lg:text-xl xl:text-2xl"
+              className="h-full w-fit text-md sm:text-xl"
             >
               Start a Research-Driven Campaign
             </Button>
