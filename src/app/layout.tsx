@@ -73,7 +73,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className={`  bg-background font-sans antialiased ${inter.className}`}
+        className={`  bg-background font-sans antialiased overflow-x-hidden ${inter.className}`}
       >
         {/* <ThemeProvider> */}
         {children}

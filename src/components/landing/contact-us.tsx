@@ -120,10 +120,10 @@ const ContactUs = () => {
           </div>
 
           {/* reCAPTCHA Component */}
-          <ReCAPTCHA
+          {/* <ReCAPTCHA
             sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
             ref={recaptchaRef}
-          />
+          /> */}
 
           {/* Error Text */}
           {error && <p className="text-red-500">{error}</p>}
