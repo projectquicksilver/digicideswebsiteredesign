@@ -32,7 +32,7 @@ export default function MarketResearchHero() {
           </p>
           <Link
             className="mx-auto h-[64px] w-[380px] sm:min-w-[440px] md:min-w-[440px] lg:min-w-[440px] xl:min-w-[440px] lg:mx-0 xl:mx-0"
-            href="mailto:connect@digicides.com"
+           href="#contact-us"
           >
             <Button
               variant="secondary"

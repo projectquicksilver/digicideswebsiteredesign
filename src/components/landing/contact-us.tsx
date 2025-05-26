@@ -43,7 +43,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-20 sm:pt-48 md:pt-48 lg:pt-48 xl:pt-48 2xl:pt-48 text-foreground md:px-24 xl:px-44">
+    <div id="contact-us" className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-20 sm:pt-48 md:pt-48 lg:pt-48 xl:pt-48 2xl:pt-48 text-foreground md:px-24 xl:px-44">
       <div className="flex w-full gap-5">
         <div className="hidden h-[770px] w-full overflow-hidden rounded-[18px] md:flex md:w-1/2">
           <Image

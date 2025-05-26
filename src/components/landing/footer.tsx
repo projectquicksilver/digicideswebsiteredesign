@@ -42,7 +42,7 @@ const Footer = () => {
               <Link className="mt-10" href="/">
                 <Button >Demo request</Button>
               </Link>
-              <Link className="mt-10" href="mailto:connect@digicides.com">
+              <Link className="mt-10" href="#contact-us">
                 <Button variant="secondary" >
                   Get in touch ↗
                 </Button>

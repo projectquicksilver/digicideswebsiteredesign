@@ -98,7 +98,7 @@ const Navbar = () => {
                               href="/services/market-research-for-agri-brands"
                               className="block px-3 py-1 text-sm text-background hover:font-bold"
                             >
-                              Market Execution
+                              Market Research
                             </Link>
                             <Link
                               href="/services/performance-marketing-for-agri-brands"
@@ -117,7 +117,7 @@ const Navbar = () => {
             <div className="flex h-[51px] items-center justify-center space-x-2">
               <Link
                 className="hidden h-full w-[200px] lg:block"
-                href="mailto:connect@digicides.com"
+                href="#contact-us"
               >
                 <Button variant="default" className="h-full w-full">
                   <span className="text-lg text-black">Get in touch ↗ </span>
@@ -184,22 +184,22 @@ const Navbar = () => {
                     <div className="ml-4 flex flex-col gap-2">
                       <Link
                         href="/services/market-research-for-agri-brands"
-                        className="text-sm text-background hover:font-bold"
+                        className="text-sm text-center text-background hover:font-bold"
                       >
-                        Market Research and Campaign Execution
+                        Market Research
                       </Link>
                       <Link
                         href="/services/performance-marketing-for-agri-brands"
-                        className="text-sm text-background hover:font-bold"
+                        className="text-sm text-center text-background hover:font-bold"
                       >
-                        Performance Marketing and SEO Services
+                        Performance Marketing
                       </Link>
                     </div>
                   )}
                 </div>
               </div>
             </div>
-            <Link className="h-full w-full" href="mailto:connect@digicides.com">
+            <Link className="h-full w-full" href="#contact-us">
               <Button variant="default" className="h-full w-full">
                 <span className="text-lg text-black">Get in touch ↗ </span>
               </Button>

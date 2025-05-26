@@ -82,7 +82,7 @@ const Hero = () => {
         We are empowering agribusinesses with a tech-driven platform for seamless lead generation,
         targeted farmer engagement, and complete marketing transparency.
         </p>
-        <Link className="w-[240px] h-[64px] mx-auto lg:mx-0 xl:mx-0" href="mailto:connect@digicides.com">
+        <Link className="w-[240px] h-[64px] mx-auto lg:mx-0 xl:mx-0" href="#contact-us">
           <Button variant="secondary" size="lg" className="h-full w-full text-xl">
             Connect with us
           </Button>

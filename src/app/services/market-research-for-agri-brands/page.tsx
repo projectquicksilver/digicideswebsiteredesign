@@ -23,7 +23,7 @@ export const metadata = {
 
 export default function MarketResearchAndCampaignExecution() {
   return (
-    <div className="flex flex-col gap-20">
+    <div className="flex flex-col overflow-x-hidden gap-20">
       <script type="application/ld+json">
         {`
             {

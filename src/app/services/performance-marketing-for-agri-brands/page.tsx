@@ -2,6 +2,7 @@ import ContactUs from "@/components/landing/contact-us";
 import OurCustomers from "@/components/landing/our-customers";
 import PixelBg from "@/components/ui/pixel-bg";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata = {
   title: "Performance Marketing & SEO Services for Agri Brands | Digicides",
@@ -24,7 +25,7 @@ export const metadata = {
 
 export default function PerformanceMarketingAndSeoServices() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <script type="application/ld+json">
         {`
             {
@@ -72,9 +73,12 @@ export default function PerformanceMarketingAndSeoServices() {
               <p className="text-lg max-w-2xl text-center text-muted-foreground mb-8">
                 Digicides offers ROI-driven performance marketing, SEO services, and social media marketing—crafted exclusively for agri businesses.
               </p>
-              <button className="bg-foreground text-background font-medium py-3 px-8 rounded-full">
-                Get in touch
-              </button>
+              <Link
+               href="#contact-us">
+                <button className="bg-foreground text-background font-medium py-3 px-8 rounded-full">
+                  Get in touch
+                </button>
+              </Link>
             </div>
 
           </div>
@@ -231,7 +235,7 @@ export default function PerformanceMarketingAndSeoServices() {
               Offer
             </span>
           </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-5xl mx-auto">We turn agri marketing into measurable results with custom Google and Meta ad campaigns, SEO, and lead generation — All-in-One Digital Growth Suite.</p>
+          <p className="text-center text-muted-foreground mb-12 max-w-5xl mx-auto">All-in-One Digital Growth Suite</p>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="p-8 rounded-xl">
               <h3 className="text-2xl font-medium text-foreground mb-6">Performance Marketing Services</h3>
@@ -326,12 +330,12 @@ export default function PerformanceMarketingAndSeoServices() {
             {[
               {
                 title: "Lead Generation Success",
-                description: "Generated 5,000+ qualified leads for a micronutrient brand using Meta and Google Ads",
+                description: "Generated 12,000+ qualified leads for a Fertilizer brand using Meta and Instagram.",
                 icon: "📊"
               },
               {
                 title: "SEO Traffic Growth",
-                description: "Doubled website traffic for a seed company via Local SEO & keyword optimization",
+                description: "Improved keyword rankings for a Fertilizer brand by shifting focus from branded to high-intent search terms through strategic SEO.",
                 icon: "🚀"
               },
               {
@@ -351,12 +355,11 @@ export default function PerformanceMarketingAndSeoServices() {
       </section>
       <div className="flex flex-col gap-4 -mb-8 md:-mb-36">
         <h2 className="text-center text-3xl sm:text-4xl">
-          Let&apos;s Start Your Digital Growth {" "}
+          Let&apos;s Start Your Digital Growth&nbsp;
           <span className="rounded-md bg-primary/10 px-2 text-primary">
             Journey
           </span>
         </h2>
-        <p className="text-center text-muted-foreground max-w-5xl mx-auto">We turn agri marketing into measurable results with custom Google and Meta ad campaigns, SEO, and lead generation — All-in-One Digital Growth Suite.</p>
       </div>
       <ContactUs />
     </div>
