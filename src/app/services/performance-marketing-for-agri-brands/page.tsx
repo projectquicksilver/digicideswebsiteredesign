@@ -57,8 +57,10 @@ export default function PerformanceMarketingAndSeoServices() {
           })
         }}
       />
-      <section className="relative min-h-screen pt-8 px-4 sm:px-6 lg:px-8">
+      <section className="relative md:min-h-screen py-8 px-4 sm:px-6 lg:px-8">
         <PixelBg />
+        <div className="absolute bottom-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-b from-[#fbf1e8] to-white" />
+        <div className="absolute top-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-t from-[#fffdfb] to-white" />
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col justify-center gap-8 items-center">
             <p className="text-lg md:text-2xl max-w-2xl text-center text-foreground mb-8">
@@ -80,11 +82,10 @@ export default function PerformanceMarketingAndSeoServices() {
                 </button>
               </Link>
             </div>
-
           </div>
         </div>
       </section>
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="lg:py-16 py-0 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex md:flex-row flex-col w-full items-center">
             <Image

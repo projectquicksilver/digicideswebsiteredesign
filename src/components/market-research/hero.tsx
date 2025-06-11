@@ -5,8 +5,10 @@ import PixelBg from "../ui/pixel-bg";
 
 export default function MarketResearchHero() {
   return (
-    <section className="container relative flex flex-col items-center gap-2 text-center text-foreground">
+    <section className="container relative flex flex-col items-center py-8 gap-2 text-center text-foreground">
       <PixelBg />
+      {/* <div className="absolute bottom-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-b from-[#fbf1e8] to-white" /> */}
+      <div className="absolute top-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-t from-[#fdf5ed] to-white" />
       <h1 className="z-10 text-2xl font-normal tracking-tighter text-muted-foreground sm:text-4xl md:text-7xl lg:leading-[1.1]">
         Market Research for Agri Brands
       </h1>
@@ -20,7 +22,7 @@ export default function MarketResearchHero() {
       </div>
       <div className="flex flex-row">
         <div className="flex w-full flex-col gap-10 py-4 pt-16">
-          <div className="xl:text-left 2xl:text-left 3xl:text-left 4xl:text-left 5xl:text-left 6xl:text-left 7xl:text-left 8xl:text-left 9xl:text-left 10xl:text-left text-center pt-20">
+          <div className="xl:text-left xl:block hidden 2xl:text-left 3xl:text-left 4xl:text-left 5xl:text-left 6xl:text-left 7xl:text-left 8xl:text-left 9xl:text-left 10xl:text-left text-center pt-28">
             <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal tracking-tighter text-orange-500">
             </h2>
           </div>
@@ -32,7 +34,7 @@ export default function MarketResearchHero() {
           </p>
           <Link
             className="mx-auto h-[64px] w-[380px] sm:min-w-[440px] md:min-w-[440px] lg:min-w-[440px] xl:min-w-[440px] lg:mx-0 xl:mx-0"
-           href="#contact-us"
+            href="#contact-us"
           >
             <Button
               variant="secondary"

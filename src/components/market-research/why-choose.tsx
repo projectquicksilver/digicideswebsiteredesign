@@ -3,10 +3,10 @@ import MarketCard from "./market-card";
 export default function WhyChooseDigicides() {
     return (
         <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-20 sm:pt-32 md:pt-32 lg:pt-32 xl:pt-32 2xl:pt-32 text-foreground md:px-24 xl:px-44">
-          <h1 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl">
+          <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl">
             Why Choose{" "}
             <span className="rounded-md bg-primary/10 px-2 text-primary">Digicides ?</span>
-          </h1>
+          </h2>
           {/* <p className="text-center text-sm font-normal text-muted-foreground">
           Digicides is driven by a team of industry experts with deep experience in agritech, rural marketing, software development, and research. Our leadership brings a unique blend of technology and market expertise to revolutionize agri-business engagement
           </p> */}
