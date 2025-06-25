@@ -9,13 +9,13 @@ export const metadata = {
   description:
     "Boost your agri business with Google Ads, Facebook campaigns, and SEO services. Get more leads, visibility & growth with Digicides' digital marketing experts.",
   alternates: {
-    canonical: "https://digicides.com/performance-marketing-for-agri-brands"
+    canonical: "https://www.digicides.com/services/performance-marketing-for-agri-brands"
   },
   openGraph: {
     title: "Performance Marketing & SEO Services for Agri Brands | Digicides",
     description:
       "Boost your agri business with Google Ads, Facebook campaigns, and SEO services. Get more leads, visibility & growth with Digicides' digital marketing experts.",
-    url: "https://digicides.com/performance-marketing-for-agri-brands",
+    url: "https://www.digicides.com/services/performance-marketing-for-agri-brands",
     siteName: "Digicides",
     locale: "en_IN",
     type: "website"
@@ -33,7 +33,7 @@ export default function PerformanceMarketingAndSeoServices() {
               "@type": "WebPage",
               "name": "Performance Marketing & SEO Services for Agri Brands",
               "description": "Boost your agri business with targeted digital marketing—Google Ads, SEO, and social media campaigns built for agriculture brands.",
-              "url": "https://digicides.com/performance-marketing-for-agri-brands"
+              "url": "https://www.digicides.com/services/performance-marketing-for-agri-brands"
             }
           `}
       </script>
@@ -59,7 +59,7 @@ export default function PerformanceMarketingAndSeoServices() {
       />
       <section className="relative md:min-h-screen py-8 px-4 sm:px-6 lg:px-8">
         <PixelBg />
-        <div className="absolute bottom-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-b from-[#fbf1e8] to-white" />
+        {/* <div className="absolute bottom-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-b from-[#fbf1e8] to-white" /> */}
         <div className="absolute top-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-t from-[#fffdfb] to-white" />
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col justify-center gap-8 items-center">
