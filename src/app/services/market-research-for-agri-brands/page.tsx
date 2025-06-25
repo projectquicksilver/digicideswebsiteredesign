@@ -8,13 +8,13 @@ export const metadata = {
   description:
     "Gather insights with Digicides' market research and survey marketing for agri brands. Capture farmer data via SMS, WhatsApp, and digital surveys.",
   alternates: {
-    canonical: "https://digicides.com/market-research-for-agri-brands"
+    canonical: "https://www.digicides.com/services/market-research-for-agri-brands"
   },
   openGraph: {
     title: "Market Research & Survey Marketing for Agri Brands | Digicides",
     description:
       "Gather insights with Digicides' market research and survey marketing for agri brands. Capture farmer data via SMS, WhatsApp, and digital surveys.",
-    url: "https://digicides.com/market-research-for-agri-brands",
+    url: "https://www.digicides.com/services/market-research-for-agri-brands",
     siteName: "Digicides",
     locale: "en_IN",
     type: "website"
@@ -31,7 +31,7 @@ export default function MarketResearchAndCampaignExecution() {
               "@type": "WebPage",
               "name": "Market Research & Survey Marketing for Agri Brands | Digicides",
               "description": "Gather insights with Digicides' market research and survey marketing for agri brands. Capture farmer data via SMS, WhatsApp, and digital surveys.",
-              "url": "https://digicides.com/market-research-for-agri-brands"
+              "url": "https://www.digicides.com/services/market-research-for-agri-brands"
             }
           `}
       </script>
@@ -56,7 +56,7 @@ export default function MarketResearchAndCampaignExecution() {
         }}
       />
       <MarketResearchHero />
-      <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-0 text-foreground sm:pt-32 md:px-24 md:pt-32 lg:pt-32 xl:px-44 xl:pt-32 2xl:pt-32">
+      <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-0 text-foreground sm:pt-32 md:px-24 md:pt-12">
         <h2 className="text-center text-3xl sm:text-4xl">
           Why Market Research Matters{" "}
           <span className="rounded-md bg-primary/10 px-2 text-primary">
@@ -73,7 +73,7 @@ export default function MarketResearchAndCampaignExecution() {
           awareness.
         </p>
       </div>
-      <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-0 text-foreground sm:pt-32 md:px-24 md:pt-32 lg:pt-32 xl:px-44 xl:pt-32 2xl:pt-32">
+      <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-0 text-foreground sm:pt-32 md:px-24 md:pt-12">
         <h2 className="text-center text-2xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl">
           Our Market Research &{" "}
           <span className="rounded-md bg-primary/10 px-2 text-primary">
@@ -101,7 +101,9 @@ export default function MarketResearchAndCampaignExecution() {
         </div>
       </div>
       <WhyChooseDigicides />
-      <div className="flex flex-col gap-5 -mb-36 md:-mb-44">
+      {/* <div className="flex flex-col gap-5 -mb-36 md:-mb-44"> */}
+      <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-0 -mb-36 md:-mb-60 text-foreground sm:pt-32 md:px-24 md:pt-12">
+
         <h2 className="text-center text-3xl sm:text-4xl">
           Ready to Know{" "}
           <span className="rounded-md bg-primary/10 px-2 text-primary">

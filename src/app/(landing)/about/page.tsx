@@ -1,6 +1,17 @@
 import MeetOurTeam from "@/components/meet-our-team";
 import Image from "next/image";
 
+export const generateMetadata = () => {
+  return {
+    title: "About Us | Digicides",
+    description:
+      "Learn more about Digicides Marketing Services Pvt. Ltd., a SaaS-driven communication platform for the agri industry.",
+    alternates: {
+      canonical: "https://www.digicides.com/about",
+    },
+  };
+};
+
 export default function AboutPage() {
   return (
     <>
