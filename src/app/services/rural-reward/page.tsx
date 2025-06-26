@@ -284,7 +284,7 @@ export default function MarketResearchAndCampaignExecution() {
           ))}
         </div>
         <p className="text-[#212121]/60 mt-4">
-          Whether you're offering a coupon code, spinning a lucky draw wheel, or running a points-based loyalty scheme, RuralReward connects every field input with measurable outcomes.
+          Whether you&apos;re offering a coupon code, spinning a lucky draw wheel, or running a points-based loyalty scheme, RuralReward connects every field input with measurable outcomes.
         </p>
         <div className="grid mt-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[15px]">
           {HowItWorks2.map((content, index) => (
