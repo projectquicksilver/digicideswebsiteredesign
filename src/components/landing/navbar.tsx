@@ -106,6 +106,12 @@ const Navbar = () => {
                             >
                               Performance Marketing
                             </Link>
+                            <Link
+                              href="/services/rural-reward"
+                              className="block px-3 py-1 text-sm text-background hover:font-bold"
+                            >
+                              Rural Reward
+                            </Link>
                           </div>
                         </div>
                       )}
@@ -193,6 +199,12 @@ const Navbar = () => {
                         className="text-sm text-center text-background hover:font-bold"
                       >
                         Performance Marketing
+                      </Link>
+                      <Link
+                        href="/services/rural-reward"
+                        className="text-sm text-center text-background hover:font-bold"
+                      >
+                        Rural Reward
                       </Link>
                     </div>
                   )}
