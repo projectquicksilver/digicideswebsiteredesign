@@ -73,7 +73,7 @@ const Navbar = () => {
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <Link
-                      href="/product"
+                      href="/rural-reward"
                       className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
                     >
                       Product
@@ -106,12 +106,12 @@ const Navbar = () => {
                             >
                               Performance Marketing
                             </Link>
-                            <Link
+                            {/* <Link
                               href="/services/rural-reward"
                               className="block px-3 py-1 text-sm text-background hover:font-bold"
                             >
                               Rural Reward
-                            </Link>
+                            </Link> */}
                           </div>
                         </div>
                       )}
@@ -169,7 +169,7 @@ const Navbar = () => {
                     <span>About</span>
                   </Button>
                 </Link>
-                <Link href="/product">
+                <Link href="/rural-reward">
                   <Button
                     variant="link"
                     className="flex w-full items-center justify-center p-0 text-sm text-background"
@@ -200,12 +200,12 @@ const Navbar = () => {
                       >
                         Performance Marketing
                       </Link>
-                      <Link
+                      {/* <Link
                         href="/services/rural-reward"
                         className="text-sm text-center text-background hover:font-bold"
                       >
                         Rural Reward
-                      </Link>
+                      </Link> */}
                     </div>
                   )}
                 </div>
