@@ -221,10 +221,10 @@ export default function MarketResearchAndCampaignExecution() {
         <h2 className="text-4xl font-medium text-medium text-center mb-12">
           What It Does
         </h2>
-        <h3 className="text-xl font-semibold text-foreground mb-2">
+        <h3 className="text-xl font-semibold text-foreground mb-2 text-center">
           The Challenge
         </h3>
-        <p className="text-[#212121]/60">
+        <p className="text-[#212121]/60 text-center">
           Agribusiness often spend heavily on marketing schemes like loyalty program, lucky draw schemes, cash rewards yet struggle to track real time return or optimize the peformance of the campaigns. Post sales data from the field is scattered, with no real insights on what worked or not.
         </p>
         <div className="grid mt-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[15px]">
@@ -265,10 +265,10 @@ export default function MarketResearchAndCampaignExecution() {
             </div>
           ))}
         </div>
-        <h3 className="text-xl mt-12 font-semibold text-foreground mb-2">
+        <h3 className="text-xl mt-12 font-semibold text-foreground mb-2 text-center">
           RuralReward Solves This by gamifying the marketing schemes.
         </h3>
-        <p className="text-[#212121]/60">
+        <p className="text-[#212121]/60 text-center">
           It helps you run loyalty programs and lucky draw campaigns for both farmers and retailers — while giving you live tracking, alerts, and reports to optimize performance and increase ROI.
         </p>
         <div className="grid mt-8 grid-cols-1 md:grid-cols-2 gap-[15px]">
@@ -283,7 +283,7 @@ export default function MarketResearchAndCampaignExecution() {
             </div>
           ))}
         </div>
-        <p className="text-[#212121]/60 mt-4">
+        <p className="text-[#212121]/60 mt-4 text-center">
           Whether you&apos;re offering a coupon code, spinning a lucky draw wheel, or running a points-based loyalty scheme, RuralReward connects every field input with measurable outcomes.
         </p>
         <div className="grid mt-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[15px]">
@@ -375,7 +375,7 @@ export default function MarketResearchAndCampaignExecution() {
             </h2>
           </div>
 
-          <div className="relative flex flex-wrap justify-between ">
+          <div className="relative flex md:flex-row flex-col justify-between ">
             <div className="grid grid-cols-1 gap-8">
               {howItWorksSteps.map((step, index) => (
                 <div key={index} className="relative flex flex-col items-start text-start">
@@ -398,7 +398,7 @@ export default function MarketResearchAndCampaignExecution() {
                 alt="RuralReward Process Flow"
                 width={800}
                 height={400}
-                className="aspect-2/1 md:w-[800px] md:h-[500px]"
+                className="aspect-2/1 w-[600px] xl:w-[800px] h-[400px] xl:h-[550px] object-cover"
               />
             </div>
           </div>
