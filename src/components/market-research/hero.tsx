@@ -8,12 +8,14 @@ export default function MarketResearchHero() {
     <section className="container relative flex flex-col items-center py-8 gap-2 text-center text-foreground">
       <PixelBg />
       {/* <div className="absolute bottom-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-b from-[#fbf1e8] to-white" /> */}
-      <div className="absolute top-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-t from-[#fdf5ed] to-white" />
-      <h1 className="z-10 text-2xl font-normal tracking-tighter text-muted-foreground sm:text-4xl md:text-7xl lg:leading-[1.1]">
+      {/* <div className="absolute top-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-t from-[#fdf5ed] to-white" /> */}
+      <h1 className="text-lg md:text-2xl max-w-2xl text-center text-foreground mb-8">
         Market Research for Agri Brands
       </h1>
-      <h2 className="text-lg md:text-4xl font-normal tracking-tighter text-primary">
-        Know Your Audience - Act with Precision
+      <h2 className="text-4xl max-w-xl lg:max-w-3xl md:text-5xl lg:text-6xl font-medium text-muted-foreground text-center mb-4">
+        Know Your Audience - <span className="text-primary">
+          Act with Precision
+        </span>
       </h2>
       <div className="block xl:hidden">
         <div className="ml-4">

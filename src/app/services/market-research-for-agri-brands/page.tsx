@@ -85,7 +85,7 @@ export default function MarketResearchAndCampaignExecution() {
           campaigns designed to collect data and create engagement—at scale.
         </p>
         <Image
-          src="/market-research/market-research-dashboard.png"
+          src="/market-research/market-research-dashboard.jpg"
           alt="Market Research Dashboard"
           width={1000}
           height={1000}

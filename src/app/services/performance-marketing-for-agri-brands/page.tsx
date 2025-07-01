@@ -59,8 +59,8 @@ export default function PerformanceMarketingAndSeoServices() {
       />
       <section className="relative md:min-h-screen py-8 px-4 sm:px-6 lg:px-8">
         <PixelBg />
-        {/* <div className="absolute bottom-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-b from-[#fbf1e8] to-white" /> */}
-        <div className="absolute top-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-t from-[#fffdfb] to-white" />
+        <div className="absolute md:hidden block bottom-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-b from-[#fbf1e8] to-white" />
+        {/* <div className="absolute top-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-t from-[#fffdfb] to-white" /> */}
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col justify-center gap-8 items-center">
             <p className="text-lg md:text-2xl max-w-2xl text-center text-foreground mb-8">
@@ -175,7 +175,7 @@ export default function PerformanceMarketingAndSeoServices() {
       </section>
 
       {/* Section 3: Our Process */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center mb-6 text-3xl sm:text-4xl">
             Smart{" "}
@@ -228,9 +228,9 @@ export default function PerformanceMarketingAndSeoServices() {
 
         </div>
       </section>
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-center mb-6 text-3xl sm:text-4xl">
+          <h2 className="text-center mb-4 text-3xl sm:text-4xl">
             Services We{" "}
             <span className="rounded-md bg-primary/10 px-2 text-primary">
               Offer
@@ -238,7 +238,7 @@ export default function PerformanceMarketingAndSeoServices() {
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-5xl mx-auto">All-in-One Digital Growth Suite</p>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-xl">
+            <div className="p-8 pt-0 rounded-xl">
               <h3 className="text-2xl font-medium text-foreground mb-6">Performance Marketing Services</h3>
               <ul className="space-y-4">
                 {[
@@ -256,7 +256,7 @@ export default function PerformanceMarketingAndSeoServices() {
               </ul>
             </div>
 
-            <div className="p-8 rounded-xl">
+            <div className="p-8 pt-0 rounded-xl">
               <h3 className="text-2xl font-medium text-foreground mb-6">SEO Services</h3>
               <ul className="space-y-4">
                 {[
@@ -276,7 +276,7 @@ export default function PerformanceMarketingAndSeoServices() {
           </div>
         </div>
       </section>
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center mb-6 text-3xl sm:text-4xl">
             We Know Agri. We Deliver {" "}
@@ -319,7 +319,7 @@ export default function PerformanceMarketingAndSeoServices() {
           </div>
         </div>
       </section>
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center mb-6 text-3xl sm:text-4xl">
             Real Results with Real {" "}

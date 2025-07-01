@@ -125,17 +125,15 @@ const supportingServices = [
 ];
 
 export const metadata = {
-  title: "Market Research & Survey Marketing for Agri Brands | Digicides",
-  description:
-    "Gather insights with Digicides' market research and survey marketing for agri brands. Capture farmer data via SMS, WhatsApp, and digital surveys.",
+  title: "RuralReward - Loyalty, Rewards & Lucky Draw Platform for Rural India | Digicides",
+  description: "Win over farmers and retailers with our loyalty, rewards, and lucky draw platform. Track results and boost sales with RuralReward by Digicides.",
   alternates: {
-    canonical: "https://digicides.com/rural-reward"
+    canonical: "https://digicides.com/product/rural-reward"
   },
   openGraph: {
-    title: "Market Research & Survey Marketing for Agri Brands | Digicides",
-    description:
-      "Gather insights with Digicides' market research and survey marketing for agri brands. Capture farmer data via SMS, WhatsApp, and digital surveys.",
-    url: "https://digicides.com/rural-reward",
+    title: "RuralReward - Loyalty, Rewards & Lucky Draw Platform for Rural India | Digicides",
+    description: "Win over farmers and retailers with our loyalty, rewards, and lucky draw platform. Track results and boost sales with RuralReward by Digicides.",
+    url: "https://digicides.com/product/rural-reward",
     siteName: "Digicides",
     locale: "en_IN",
     type: "website"
@@ -150,9 +148,9 @@ export default function MarketResearchAndCampaignExecution() {
             {
               "@context": "https://schema.org",
               "@type": "WebPage",
-              "name": "Market Research & Survey Marketing for Agri Brands | Digicides",
-              "description": "Gather insights with Digicides' market research and survey marketing for agri brands. Capture farmer data via SMS, WhatsApp, and digital surveys.",
-              "url": "https://digicides.com/rural-reward"
+              "name": "RuralReward - Loyalty, Rewards & Lucky Draw Platform for Rural India | Digicides",
+              "description": "Win over farmers and retailers with our loyalty, rewards, and lucky draw platform. Track results and boost sales with RuralReward by Digicides.",
+              "url": "https://digicides.com/product/rural-reward"
             }
           `}
       </script>
@@ -162,7 +160,7 @@ export default function MarketResearchAndCampaignExecution() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            serviceType: "Market Research & Survey Marketing for Agri Brands | Digicides",
+            serviceType: "RuralReward - Loyalty, Rewards & Lucky Draw Platform for Rural India | Digicides",
             provider: {
               "@type": "Organization",
               name: "Digicides Marketing Services Pvt. Ltd."
@@ -171,8 +169,7 @@ export default function MarketResearchAndCampaignExecution() {
               "@type": "Country",
               name: "India"
             },
-            description:
-              "Gather insights with Digicides' market research and survey marketing for agri brands. Capture farmer data via SMS, WhatsApp, and digital surveys."
+            description: "Win over farmers and retailers with our loyalty, rewards, and lucky draw platform. Track results and boost sales with RuralReward by Digicides."
           })
         }}
       />
@@ -217,7 +214,7 @@ export default function MarketResearchAndCampaignExecution() {
         <OurCustomers />
       </div>
       {/* What It Does */}
-      <section className="max-w-7xl px-4 mx-auto">
+      <section className="2xl:max-w-7xl max-w-5xl px-4 mx-auto">
         <h2 className="text-4xl font-medium text-medium text-center mb-12">
           What It Does
         </h2>
@@ -349,7 +346,7 @@ export default function MarketResearchAndCampaignExecution() {
         </div>
       </section>
       {/* Key Features */}
-      <section className="max-w-7xl px-4 mx-auto">
+      <section className="2xl:max-w-7xl max-w-5xl px-4 mx-auto">
         <h2 className="text-4xl font-medium text-medium text-center mb-12">
           Key Features
         </h2>
@@ -368,7 +365,7 @@ export default function MarketResearchAndCampaignExecution() {
       </section>
       {/* How It Works */}
       <section className="w-full px-4 bg-white">
-        <div className="container mx-auto max-w-7xl">
+        <div className="container mx-auto 2xl:max-w-7xl max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-medium text-medium text-center mb-12">
               How It Works
@@ -407,7 +404,7 @@ export default function MarketResearchAndCampaignExecution() {
 
       {/* Supporting Services */}
       <section className="w-full px-4">
-        <div className="container mx-auto max-w-7xl">
+        <div className="container mx-auto max-w-5xl 2xl:max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-medium text-medium text-center mb-12">
               Supporting Services
@@ -461,7 +458,7 @@ export default function MarketResearchAndCampaignExecution() {
 
       {/* Case Study Highlight */}
       <section className="w-full px-4">
-        <div className="container mx-auto max-w-7xl">
+        <div className="container mx-auto max-w-5xl 2xl:max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-medium text-medium text-center mb-12">
               Case Study Highlight
