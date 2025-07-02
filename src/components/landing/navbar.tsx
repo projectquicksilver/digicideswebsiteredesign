@@ -72,12 +72,30 @@ const Navbar = () => {
                     </Link>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <Link
-                      href="/rural-reward"
-                      className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
+                    <div
+                      className="relative flex flex-col justify-start items-start gap-5"
+                      onMouseEnter={() => setOpenSubMenu("Product")}
+                      onMouseLeave={() => setOpenSubMenu(null)}
                     >
-                      Product
-                    </Link>
+                      <button
+                        className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
+                      >
+                        Product
+                      </button>
+                      {openSubMenu === "Product" && (
+                        <div className="absolute left-0 pt-6">
+                          <div className="h-6" />
+                          <div className="min-w-[250px] flex-col rounded-md bg-black/80 p-4 gap-4 z-50">
+                            <Link
+                              href="/product/rural-reward"
+                              className="block px-3 py-1 text-sm text-background hover:font-bold"
+                            >
+                              Rural Reward
+                            </Link>
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <div
@@ -169,7 +187,7 @@ const Navbar = () => {
                     <span>About</span>
                   </Button>
                 </Link>
-                <Link href="/rural-reward">
+                <div className="flex flex-col gap-2">
                   <Button
                     variant="link"
                     className="flex w-full items-center justify-center p-0 text-sm text-background"
@@ -177,7 +195,17 @@ const Navbar = () => {
                   >
                     <span>Product</span>
                   </Button>
-                </Link>
+                  {openSubMenu === "Product" && (
+                    <div className="ml-4 flex flex-col gap-2">
+                      <Link
+                        href="/product/rural-reward"
+                        className="text-sm text-center text-background hover:font-bold"
+                      >
+                        Rural Reward
+                      </Link>
+                    </div>
+                  )}
+                </div>
                 <div className="flex flex-col gap-2">
                   <Button
                     variant="link"
