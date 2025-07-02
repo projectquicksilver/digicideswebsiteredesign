@@ -23,7 +23,7 @@ export const metadata = {
 
 export default function MarketResearchAndCampaignExecution() {
   return (
-    <div className="flex flex-col overflow-x-hidden gap-20">
+    <div className="flex flex-col overflow-x-hidden gap-12 md:gap-20">
       <script type="application/ld+json">
         {`
             {
@@ -57,7 +57,7 @@ export default function MarketResearchAndCampaignExecution() {
       />
       <MarketResearchHero />
       <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-0 text-foreground sm:pt-32 md:px-24 md:pt-12">
-        <h2 className="text-center text-3xl sm:text-4xl">
+        <h2 className="text-center text-2xl sm:text-4xl">
           Why Market Research Matters{" "}
           <span className="rounded-md bg-primary/10 px-2 text-primary">
             in Agri Marketing
@@ -104,7 +104,7 @@ export default function MarketResearchAndCampaignExecution() {
       {/* <div className="flex flex-col gap-5 -mb-36 md:-mb-44"> */}
       <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-0 -mb-36 md:-mb-60 text-foreground sm:pt-32 md:px-24 md:pt-12">
 
-        <h2 className="text-center text-3xl sm:text-4xl">
+        <h2 className="text-center text-2xl sm:text-4xl">
           Ready to Know{" "}
           <span className="rounded-md bg-primary/10 px-2 text-primary">
             Your Market ?
