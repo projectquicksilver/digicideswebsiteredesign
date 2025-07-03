@@ -177,7 +177,7 @@ export default function MarketResearchAndCampaignExecution() {
         <PixelBg />
         {/* <div className="absolute bottom-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-b from-[#fbf1e8] to-white" /> */}
         {/* <div className="absolute top-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-t from-[#fdf5ed] to-white" /> */}
-        <h1 className="text-lg md:text-3xl max-w-5xl text-center text-foreground my-8">
+        <h1 className="z-10 text-2xl font-normal tracking-tighter text-center text-muted-foreground sm:text-4xl lg:leading-[1.1]">
           RuralReward - Loyalty, Rewards & Lucky Draw Platform for Rural India
         </h1>
         <div className="block xl:hidden">
@@ -185,9 +185,9 @@ export default function MarketResearchAndCampaignExecution() {
         </div>
         <div className="flex flex-row md:pt-12 pt-0">
           <div className="flex w-full flex-col xl:justify-start items-center xl:items-start gap-4 md:gap-10 md:pt-12 pt-0">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl  font-medium tracking-tighter mx-10 max-w-2xl text-muted-foreground lg:mx-0 xl:mx-0 xl:text-left">
+            <h2 className="text-lg md:text-6xl text-center md:text-left md:max-w-xl font-normal tracking-tighter text-primary">
               Reward farmers and retailers. Track results. Boost sales.
-            </h1>
+            </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl  font-regular mx-10 max-w-2xl text-muted-foreground lg:mx-0 lg:text-left xl:mx-0 xl:text-left">
               Your Partner in Rural Loyalty & Lucky Draw Campaigns
             </p>
