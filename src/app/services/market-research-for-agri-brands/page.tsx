@@ -102,7 +102,7 @@ export default function MarketResearchAndCampaignExecution() {
       </div>
       <WhyChooseDigicides />
       {/* <div className="flex flex-col gap-5 -mb-36 md:-mb-44"> */}
-      <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-0 -mb-36 md:-mb-60 text-foreground sm:pt-32 md:px-24 md:pt-12">
+      <div className="z-10 flex w-full flex-col items-center justify-start gap-8 px-4 pt-0 -mb-24 md:-mb-60 text-foreground sm:pt-32 md:px-24 md:pt-12">
 
         <h2 className="text-center text-2xl sm:text-4xl">
           Ready to Know{" "}
