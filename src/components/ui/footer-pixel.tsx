@@ -54,7 +54,7 @@ const FooterPixel = () => {
           width="1012"
           height="1170.77"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend

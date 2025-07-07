@@ -83,7 +83,7 @@ const PixelBg = () => {
           width="1012"
           height="1170.77"
           filterUnits="userSpaceOnUse"
-          // color-interpolation-filters="sRGB"
+          // colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
@@ -104,7 +104,7 @@ const PixelBg = () => {
           width="1349.41"
           height="1222.22"
           filterUnits="userSpaceOnUse"
-          // color-interpolation-filters="sRGB"
+          // colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
@@ -125,7 +125,7 @@ const PixelBg = () => {
           width="1518.64"
           height="1368.77"
           filterUnits="userSpaceOnUse"
-          // color-interpolation-filters="sRGB"
+          // colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
@@ -146,7 +146,7 @@ const PixelBg = () => {
           width="997.224"
           height="840.018"
           filterUnits="userSpaceOnUse"
-          // color-interpolation-filters="sRGB"
+          // colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
