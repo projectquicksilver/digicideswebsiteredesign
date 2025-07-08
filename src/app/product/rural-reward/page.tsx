@@ -1,3 +1,4 @@
+import ContactUs from "@/components/landing/contact-us";
 import OurCustomers from "@/components/landing/our-customers";
 import { RuralRewardCarousel } from "@/components/rural-reward/rural-reward-carousel";
 import { Button } from "@/components/ui/button";
@@ -483,7 +484,7 @@ export default function MarketResearchAndCampaignExecution() {
                   <h4 className="text-lg font-medium text-foreground mb-2">Result:</h4>
                   <div className="flex justify-start items-center mb-2">
                     <h4 className="text-nowrap text-lg sm:text-2xl text-foreground/80 font-medium mr-1">₹14 Cr+</h4>
-                    <p className="text-nowrap">worth of a single SKU pquidated</p>
+                    <p className="text-nowrap">worth of a single SKU liquidated</p>
                   </div>
                   <div className="flex justify-start items-center mb-2">
                     <h4 className="text-nowrap text-lg sm:text-2xl text-foreground/80 font-medium mr-1">40 K+</h4>
@@ -498,6 +499,9 @@ export default function MarketResearchAndCampaignExecution() {
             </div>
           </div>
         </div>
+      </section>
+      <section id="contact-us" className="-mt-24 md:-mt-44">
+        <ContactUs />
       </section>
     </div>
   );
