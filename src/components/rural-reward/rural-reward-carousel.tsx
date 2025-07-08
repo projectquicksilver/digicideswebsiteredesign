@@ -23,7 +23,7 @@ export function RuralRewardCarousel() {
             onMouseLeave={plugin.current.reset}
         >
             <CarouselContent>
-                {Array.from({ length: 4 }).map((_, index) => (
+                {Array.from({ length: 3 }).map((_, index) => (
                     <CarouselItem key={index}>
                         <Image
                             src={`/rural-reward/rural-reward-hero-${index + 1}.png`}
