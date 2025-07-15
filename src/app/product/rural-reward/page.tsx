@@ -2,7 +2,6 @@ import ContactUs from "@/components/landing/contact-us";
 import OurCustomers from "@/components/landing/our-customers";
 import { RuralRewardCarousel } from "@/components/rural-reward/rural-reward-carousel";
 import { Button } from "@/components/ui/button";
-import PixelBg from "@/components/ui/pixel-bg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -175,7 +174,7 @@ export default function MarketResearchAndCampaignExecution() {
         }}
       />
       <section className="container relative flex flex-col items-center py-8 gap-2 text-center text-foreground">
-        <PixelBg />
+        {/* <PixelBg /> */}
         {/* <div className="absolute bottom-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-b from-[#fbf1e8] to-white" /> */}
         {/* <div className="absolute top-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-t from-[#fdf5ed] to-white" /> */}
         <h1 className="z-10 text-2xl font-normal tracking-tighter text-center text-muted-foreground sm:text-4xl lg:leading-[1.1]">
@@ -184,8 +183,8 @@ export default function MarketResearchAndCampaignExecution() {
         <div className="block xl:hidden">
           <RuralRewardCarousel />
         </div>
-        <div className="flex flex-row md:pt-12 pt-0">
-          <div className="flex w-full flex-col xl:justify-start items-center xl:items-start gap-4 md:gap-10 md:pt-12 pt-0">
+        <div className="flex flex-row md:gap-8 md:pt-12 pt-0">
+          <div className="flex w-fit flex-col xl:justify-start items-center xl:items-start gap-4 md:gap-10 md:pt-12 pt-0">
             <h2 className="text-lg md:text-6xl text-center md:text-left md:max-w-xl font-normal tracking-tighter text-primary">
               Reward farmers and retailers. Track results. Boost sales.
             </h2>
@@ -205,7 +204,7 @@ export default function MarketResearchAndCampaignExecution() {
             </Button>
           </div>
           <div className="hidden xl:block 2xl:block 3xl:block 4xl:block 5xl:block 6xl:block 7xl:block 8xl:block 9xl:block 10xl:block">
-            <div className="right-0 -mr-20">
+            <div className="right-0">
               <RuralRewardCarousel />
             </div>
           </div>
@@ -269,11 +268,11 @@ export default function MarketResearchAndCampaignExecution() {
         <p className="text-[#212121]/60 text-center">
           It helps you run loyalty programs and lucky draw campaigns for both farmers and retailers — while giving you live tracking, alerts, and reports to optimize performance and increase ROI.
         </p>
-        <div className="grid mt-8 grid-cols-1 md:grid-cols-2 gap-[15px]">
+        <div className="grid mt-8 grid-cols-1 md:grid-cols-4 gap-[15px]">
           {HowItWorks3.map((content, index) => (
             <div key={index} className="bg-[#fff] p-3 rounded-[15px] transition flex flex-col justify-center items-center gap-4 duration-300">
-              <div className="h-[240px] w-full overflow-hidden rounded-xl">
-                <Image src={`/rural-reward/how-it-works-${index + 1}.png`} height={500} width={500} alt={`How it works ${index + 1}`} className="size-full object-cover" />
+              <div className="h[140px] w-full overflow-hidden rounded-xl">
+                <Image src={`/rural-reward/how-it-works-${index + 1}.png`} height={500} width={500} alt={`How it works ${index + 1}`} className="size-full object-contain rounded-xl overflow-hidden" />
               </div>
               <p className="text-[#212121] font-medium">
                 {content.title}
@@ -374,29 +373,31 @@ export default function MarketResearchAndCampaignExecution() {
           </div>
 
           <div className="relative flex md:flex-row flex-col justify-between ">
-            <div className="grid grid-cols-1 gap-8">
+            <div className="grid grid-cols-1 gap-8 md:gap-12">
               {howItWorksSteps.map((step, index) => (
-                <div key={index} className="relative flex flex-col items-start text-start">
-                  <div className="bg-[#FEF4E8] text-foreground h-8 px-3 rounded-full flex items-center justify-center text-sm font-normal mb-4 z-10">
+                <div key={index} className="relative flex flex-row gap-3 items-start text-start">
+                  <div className="bg-[#FEF4E8] text-foreground h-8 px-3 rounded-full flex items-center text-nowrap justify-center text-sm font-normal z-10">
                     STEP {index + 1}
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-[#212121]/60">
-                    {step.description}
-                  </p>
+                  <div className="flex flex-col">
+                    <h3 className="text-xl font-semibold text-foreground">
+                      {step.title}
+                    </h3>
+                    <p className="text-[#212121]/60">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
 
-            <div className="md:mt-36 mt-8 flex justify-center">
+            <div className="md:mt-16 mt-12 flex justify-center">
               <Image
                 src="/rural-reward/how-it-works.png"
                 alt="RuralReward Process Flow"
                 width={800}
                 height={400}
-                className="aspect-2/1 w-[600px] xl:w-[800px] h-[400px] xl:h-[550px] object-cover"
+                className="aspect-2/1 w-[480px] xl:w-[600px] h-[320px] xl:h-[413px] object-cover"
               />
             </div>
           </div>

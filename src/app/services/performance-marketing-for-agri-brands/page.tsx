@@ -1,6 +1,5 @@
 import ContactUs from "@/components/landing/contact-us";
 import OurCustomers from "@/components/landing/our-customers";
-import PixelBg from "@/components/ui/pixel-bg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -57,22 +56,22 @@ export default function PerformanceMarketingAndSeoServices() {
           })
         }}
       />
-      <section className="relative md:min-h-screen py-8 px-4 sm:px-6 lg:px-8">
-        <PixelBg />
+      <section className="relative pt-8 px-4 sm:px-6 lg:px-8">
+        {/* <PixelBg /> */}
         {/* <div className="absolute md:hidden block bottom-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-b from-[#fbf1e8] to-white" /> */}
         {/* <div className="absolute top-0 left-0 right-0 w-full z-[-10] h-12 bg-gradient-to-t from-[#fffdfb] to-white" /> */}
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col justify-center gap-8 items-center">
+          <div className="flex flex-col justify-center gap-4 items-center">
             <h1 className="z-10 text-2xl font-normal tracking-tighter text-center text-muted-foreground sm:text-4xl lg:leading-[1.1]">
               Reach the Right Farmers. Maximize Every Rupee.
             </h1>
-            <div className="flex flex-col items-center justify-center gap-8 text-center">
-              <h2 className="text-lg md:text-6xl max-w-3xl mt-4 font-normal tracking-tighter text-primary">
+            <div className="flex flex-col items-center justify-center gap-4 text-center">
+              <h2 className="text-lg md:text-6xl max-w-4xl mt-4 font-normal tracking-tighter text-primary">
                 From Fields to Feeds: <span className="text-primary">
                   Grow Your Agri Brand with Digital Marketing
                 </span>
               </h2>
-              <p className="text-lg max-w-2xl text-center text-muted-foreground mb-8">
+              <p className="text-lg max-w-2xl text-center text-muted-foreground mb-4">
                 Digicides offers ROI-driven performance marketing, SEO services, and social media marketing—crafted exclusively for agri businesses.
               </p>
               <Link
@@ -85,16 +84,18 @@ export default function PerformanceMarketingAndSeoServices() {
           </div>
         </div>
       </section>
-      <section className="lg:py-16 py-0 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex md:flex-row flex-col w-full items-center">
-            <Image
-              src="/performance-marketing/Performance-Marketing-1.png"
-              width={540}
-              height={300}
-              alt="Traditional marketing vs digital marketing"
-              className="w-auto h-[320px] rounded-lg mb-4"
-            />
+            <div className="md:w-[420px] w-[200px] md:py-0 py-16">
+              <Image
+                src="/performance-marketing/Performance-Marketing-1.png"
+                width={540}
+                height={300}
+                alt="Traditional marketing vs digital marketing"
+                className="h-auto w-[420px] rounded-lg -mt-12"
+              />
+            </div>
             <div className="w-full">
               <h2 className="text-center mb-6 text-3xl sm:text-4xl">
                 Traditional Outreach is {" "}
@@ -113,13 +114,15 @@ export default function PerformanceMarketingAndSeoServices() {
                 If your competitors are online—you need to be ahead.
               </p>
             </div>
-            <Image
-              src="/performance-marketing/Performance-Marketing-2.png"
-              width={540}
-              height={300}
-              alt="Traditional marketing vs digital marketing"
-              className="w-auto h-[320px] rounded-lg mb-4"
-            />
+            <div className="md:w-[420px] w-[200px]">
+              <Image
+                src="/performance-marketing/Performance-Marketing-2.png"
+                width={540}
+                height={300}
+                alt="Traditional marketing vs digital marketing"
+                className="h-auto w-[420px] rounded-lg md:-mt-12"
+              />
+            </div>
           </div>
         </div>
       </section>
