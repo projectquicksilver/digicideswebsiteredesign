@@ -18,15 +18,15 @@ export function RuralRewardCarousel() {
     return (
         <Carousel
             plugins={[plugin.current]}
-            className="w-full max-w-sm md:max-w-2xl"
+            className="w-full max-w-sm md:max-w-4xl"
             onMouseEnter={plugin.current.stop}
             onMouseLeave={plugin.current.reset}
         >
             <CarouselContent>
-                {Array.from({ length: 3 }).map((_, index) => (
+                {Array.from({ length: 6 }).map((_, index) => (
                     <CarouselItem key={index}>
                         <Image
-                            src={`/rural-reward/rural-reward-hero-${index + 1}.png`}
+                            src={`/rural-reward/rural-reward-hero-${index + 1}.jpg`}
                             alt="Right Element"
                             // layout="responsive"
                             width={1000}
