@@ -6,10 +6,12 @@ const StepsCard = ({
   title,
   text,
   imagePath,
+  link="/"
 }: {
   title: string;
   text: string;
   imagePath: string;
+  link?: string;
 }) => {
   return (
     <div className="grid grid-cols-2 w-full min-h-[180px] rounded-xl bg-primary/10 p-4">
@@ -26,7 +28,7 @@ const StepsCard = ({
         <p className="text-md mt-2 text-gray-600">
           {text}
         </p>
-        <Link href="/under-construction" className="flex items-center text-black font-bold mt-4">
+        <Link href={link} className="flex items-center text-black font-bold mt-4">
         <button className="flex items-center text-black font-bold mt-4 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0">
           Know More ↗
         </button>
