@@ -258,7 +258,7 @@ export default function EngagementPage() {
               How It Works
             </h2>
             <h3 className="text-xl font-semibold text-foreground mb-2">
-              How Our Mass Audio Engagement which we call "DigiNews" Platform Operates:
+              How Our Mass Audio Engagement which we call &quot;DigiNews&quot; Platform Operates:
             </h3>
             <p className="text-[#212121]/60 mb-8">
               Connect with Up to 25,000 Farmers in Real-Time
@@ -273,7 +273,7 @@ export default function EngagementPage() {
               Not every farmer has a smartphone, but they all have a phone. Our audio bridge technology allows brands to conduct real-time communication at scale—no app, no data, no complexity.
             </p>
             <p className="text-[#212121]/60 mb-8">
-              Whether it's a training, a virtual product demo, or a feedback session—conference calls help you connect with even the most remote communities.
+              Whether it&apos;s a training, a virtual product demo, or a feedback session—conference calls help you connect with even the most remote communities.
             </p>
           </div>
 
