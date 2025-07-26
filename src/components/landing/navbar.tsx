@@ -15,10 +15,69 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
 
+  // Navigation links array - single source of truth
+  const navigationLinks = [
+    {
+      name: "Home",
+      href: "/",
+      type: "link"
+    },
+    {
+      name: "About",
+      href: "/about",
+      type: "link"
+    },
+    {
+      name: "Product",
+      type: "dropdown",
+      items: [
+        {
+          name: "Rural Reward",
+          href: "/product/rural-reward"
+        },
+        {
+          name: "Engagements",
+          href: "/product/engagement"
+        }
+      ]
+    },
+    {
+      name: "Services",
+      type: "dropdown",
+      items: [
+        {
+          name: "Market Research",
+          href: "/services/market-research-for-agri-brands"
+        },
+        {
+          name: "Performance Marketing",
+          href: "/services/performance-marketing-for-agri-brands"
+        }
+        // Uncomment when needed:
+        // {
+        //   name: "Rural Reward",
+        //   href: "/services/rural-reward"
+        // }
+      ]
+    }
+  ];
+
   console.log(openSubMenu);
 
   const toggleSubMenu = (name: string) => {
     setOpenSubMenu((prev) => (prev === name ? null : name));
+  };
+
+  const handleContactClick = () => {
+    // GTM tracking for contact button clicks
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'button_click',
+        button_name: 'get_in_touch_navbar',
+        button_location: 'navbar',
+        page_location: window.location.href
+      });
+    }
   };
 
   useEffect(() => {
@@ -55,86 +114,46 @@ const Navbar = () => {
             <div className="ml-4 hidden items-center lg:flex">
               <NavigationMenu>
                 <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <Link
-                      href="/"
-                      className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
-                    >
-                      Home
-                    </Link>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <Link
-                      href="/about"
-                      className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
-                    >
-                      About
-                    </Link>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <div
-                      className="relative flex flex-col justify-start items-start gap-5"
-                      onMouseEnter={() => setOpenSubMenu("Product")}
-                      onMouseLeave={() => setOpenSubMenu(null)}
-                    >
-                      <button
-                        className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
-                      >
-                        Product
-                      </button>
-                      {openSubMenu === "Product" && (
-                        <div className="absolute left-0 pt-6">
-                          <div className="h-6" />
-                          <div className="min-w-[250px] flex-col rounded-md bg-black/80 p-4 gap-4 z-50">
-                            <Link
-                              href="/product/rural-reward"
-                              className="block px-3 py-1 text-sm text-background hover:font-bold"
-                            >
-                              Rural Reward
-                            </Link>
-                          </div>
+                  {navigationLinks.map((item, index) => (
+                    <NavigationMenuItem key={index}>
+                      {item.type === "link" ? (
+                        <Link
+                          href={item.href!}
+                          className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
+                        >
+                          {item.name}
+                        </Link>
+                      ) : (
+                        <div
+                          className="relative flex flex-col justify-start items-start gap-5"
+                          onMouseEnter={() => setOpenSubMenu(item.name)}
+                          onMouseLeave={() => setOpenSubMenu(null)}
+                        >
+                          <button
+                            className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
+                          >
+                            {item.name}
+                          </button>
+                          {openSubMenu === item.name && (
+                            <div className="absolute left-0 pt-6">
+                              <div className="h-6" />
+                              <div className={`min-w-[${item.name === "Product" ? "250px" : "350px"}] flex-col rounded-md bg-black/80 p-4 gap-4 z-50`}>
+                                {item.items?.map((subItem, subIndex) => (
+                                  <Link
+                                    key={subIndex}
+                                    href={subItem.href}
+                                    className="block px-3 py-1 text-sm text-background hover:font-bold"
+                                  >
+                                    {subItem.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          )}
                         </div>
                       )}
-                    </div>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <div
-                      className="relative flex flex-col justify-start items-start gap-5"
-                      onMouseEnter={() => setOpenSubMenu("Services")}
-                      onMouseLeave={() => setOpenSubMenu(null)}
-                    >
-                      <button
-                        className="mx-2 h-auto bg-transparent text-base font-normal text-muted transition-all hover:text-background"
-                      >
-                        Services
-                      </button>
-                      {openSubMenu === "Services" && (
-                        <div className="absolute left-0 pt-6">
-                          <div className="h-6" />
-                          <div className="min-w-[350px] flex-col rounded-md bg-black/80 p-4 gap-4 z-50">
-                            <Link
-                              href="/services/market-research-for-agri-brands"
-                              className="block px-3 py-1 text-sm text-background hover:font-bold"
-                            >
-                              Market Research
-                            </Link>
-                            <Link
-                              href="/services/performance-marketing-for-agri-brands"
-                              className="block px-3 py-1 text-sm text-background hover:font-bold"
-                            >
-                              Performance Marketing
-                            </Link>
-                            {/* <Link
-                              href="/services/rural-reward"
-                              className="block px-3 py-1 text-sm text-background hover:font-bold"
-                            >
-                              Rural Reward
-                            </Link> */}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </NavigationMenuItem>
+                    </NavigationMenuItem>
+                  ))}
                 </NavigationMenuList>
               </NavigationMenu>
             </div>
@@ -142,6 +161,7 @@ const Navbar = () => {
               <Link
                 className="hidden h-full w-[200px] lg:block"
                 href="#contact-us"
+                onClick={handleContactClick}
               >
                 <Button variant="default" className="h-full w-full">
                   <span className="text-lg text-black">Get in touch ↗ </span>
@@ -169,77 +189,49 @@ const Navbar = () => {
           <div className="flex flex-col items-start gap-4">
             <div className="flex w-full flex-col gap-4">
               <div className="flex flex-col gap-2">
-                <Link href="/">
-                  <Button
-                    variant="link"
-                    className="flex w-full items-center justify-center p-0 text-sm text-background"
-                    onClick={() => toggleSubMenu("Home")}
-                  >
-                    <span>Home</span>
-                  </Button>
-                </Link>
-                <Link href="/about">
-                  <Button
-                    variant="link"
-                    className="flex w-full items-center justify-center p-0 text-sm text-background"
-                    onClick={() => toggleSubMenu("About")}
-                  >
-                    <span>About</span>
-                  </Button>
-                </Link>
-                <div className="flex flex-col gap-2">
-                  <Button
-                    variant="link"
-                    className="flex w-full items-center justify-center p-0 text-sm text-background"
-                    onClick={() => toggleSubMenu("Product")}
-                  >
-                    <span>Product</span>
-                  </Button>
-                  {openSubMenu === "Product" && (
-                    <div className="ml-4 flex flex-col gap-2">
-                      <Link
-                        href="/product/rural-reward"
-                        className="text-sm text-center text-background hover:font-bold"
-                      >
-                        Rural Reward
+                {navigationLinks.map((item, index) => (
+                  <div key={index}>
+                    {item.type === "link" ? (
+                      <Link href={item.href!}>
+                        <Button
+                          variant="link"
+                          className="flex w-full items-center justify-center p-0 text-sm text-background"
+                        >
+                          <span>{item.name}</span>
+                        </Button>
                       </Link>
-                    </div>
-                  )}
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Button
-                    variant="link"
-                    className="flex w-full items-center justify-center p-0 text-sm text-background"
-                    onClick={() => toggleSubMenu("Services")}
-                  >
-                    <span>Services</span>
-                  </Button>
-                  {openSubMenu === "Services" && (
-                    <div className="ml-4 flex flex-col gap-2">
-                      <Link
-                        href="/services/market-research-for-agri-brands"
-                        className="text-sm text-center text-background hover:font-bold"
-                      >
-                        Market Research
-                      </Link>
-                      <Link
-                        href="/services/performance-marketing-for-agri-brands"
-                        className="text-sm text-center text-background hover:font-bold"
-                      >
-                        Performance Marketing
-                      </Link>
-                      {/* <Link
-                        href="/services/rural-reward"
-                        className="text-sm text-center text-background hover:font-bold"
-                      >
-                        Rural Reward
-                      </Link> */}
-                    </div>
-                  )}
-                </div>
+                    ) : (
+                      <div className="flex flex-col gap-2">
+                        <Button
+                          variant="link"
+                          className="flex w-full items-center justify-center p-0 text-sm text-background"
+                          onClick={() => toggleSubMenu(item.name)}
+                        >
+                          <span>{item.name}</span>
+                        </Button>
+                        {openSubMenu === item.name && (
+                          <div className="ml-4 flex flex-col gap-2">
+                            {item.items?.map((subItem, subIndex) => (
+                              <Link
+                                key={subIndex}
+                                href={subItem.href}
+                                className="text-sm text-center text-background hover:font-bold"
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
-            <Link className="h-full w-full" href="#contact-us">
+            <Link className="h-full w-full" href="#contact-us" onClick={() => {
+              handleContactClick();
+              setIsOpen(false);
+            }}>
               <Button variant="default" className="h-full w-full">
                 <span className="text-lg text-black">Get in touch ↗ </span>
               </Button>

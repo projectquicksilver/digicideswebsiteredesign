@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { Shell } from "../shell";
 import { Button } from "../ui/button";
@@ -21,6 +22,31 @@ const Footer = () => {
       ],
     },
   ];
+  
+  const handleDemoRequestClick = () => {
+    // GTM tracking for demo request button clicks
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'button_click',
+        button_name: 'demo_request_footer',
+        button_location: 'footer',
+        page_location: window.location.href
+      });
+    }
+  };
+
+  const handleGetInTouchClick = () => {
+    // GTM tracking for get in touch button clicks
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'button_click',
+        button_name: 'get_in_touch_footer',
+        button_location: 'footer',
+        page_location: window.location.href
+      });
+    }
+  };
+
   return (
     <footer className="relative w-full pt-20 mt-20 overflow-hidden border-t bg-[#f7f7f7]">
       <FooterPixel />
@@ -39,10 +65,10 @@ const Footer = () => {
             targeted farmer engagement, and complete marketing transparency.
             </p>
             <div className="flex flex-row sm:flex-row gap-10">
-              <Link className="mt-10" href="/">
-                <Button >Demo request</Button>
+            <Link className="mt-10" href="/" onClick={handleDemoRequestClick}>
+                <Button>Demo request</Button>
               </Link>
-              <Link className="mt-10" href="#contact-us">
+              <Link className="mt-10" href="#contact-us" onClick={handleGetInTouchClick}>
                 <Button variant="secondary" >
                   Get in touch ↗
                 </Button>

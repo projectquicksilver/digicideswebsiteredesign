@@ -180,7 +180,7 @@ export default function MarketResearchAndCampaignExecution() {
         <h1 className="z-10 text-2xl font-normal tracking-tighter text-center text-muted-foreground sm:text-4xl lg:leading-[1.1]">
           RuralReward - Loyalty, Rewards & Lucky Draw Platform for Rural India
         </h1>
-        <div className="block xl:hidden">
+        <div className="block xl:hidden h-[250px]">
           <RuralRewardCarousel />
         </div>
         <div className="flex flex-row md:gap-8 md:pt-12 pt-0">
@@ -204,7 +204,7 @@ export default function MarketResearchAndCampaignExecution() {
             </Button>
           </div>
           <div className="hidden xl:block 2xl:block 3xl:block 4xl:block 5xl:block 6xl:block 7xl:block 8xl:block 9xl:block 10xl:block">
-            <div className="right-0">
+            <div className="right-0 h-[500px]">
               <RuralRewardCarousel />
             </div>
           </div>
