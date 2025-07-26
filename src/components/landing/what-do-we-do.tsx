@@ -29,7 +29,7 @@ const WhatDoWeDo = () => {
             title="Engage"
             text="Leverage omni-channel communication tools to interact with farmers effectively."
             imagePath="/images/engage.png"
-            link="/engagement"
+            link="/product/engagement"
           />
         </div>
         <div className="flex w-full flex-col gap-3 md:flex-row">
@@ -37,6 +37,7 @@ const WhatDoWeDo = () => {
             title="Convert"
             text="Turn high-intent leads into loyal customers with targeted follow-ups and insights."
             imagePath="/images/convert.png"
+            link="/product/rural-reward"
           />
           <StepsCard
             title="Analyse"
