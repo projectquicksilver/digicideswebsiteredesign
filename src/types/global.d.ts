@@ -1,10 +1,10 @@
 interface Window {
-  dataLayer: any[];
+  dataLayer: Record<string, unknown>[];
 }
 
 declare global {
   interface Window {
-    dataLayer: any[];
+    dataLayer: Record<string, unknown>[];
   }
 }
 
