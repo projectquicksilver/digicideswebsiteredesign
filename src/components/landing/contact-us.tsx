@@ -10,16 +10,86 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { CheckCircle } from "lucide-react";
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({ name: '', organization: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', organization: '', email: '', phone: '', message: '' });
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [error, setError] = useState('');
+  const [fieldErrors, setFieldErrors] = useState<{[key: string]: string}>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // Validation functions
+  const validateEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhone = (phone: string): boolean => {
+    // Allow various phone number formats (10 digits with optional country code, spaces, dashes, parentheses)
+    const phoneRegex = /^(\+\d{1,3}[-.\s]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
+    const cleanPhone = phone.replace(/\D/g, '');
+    return cleanPhone.length >= 10 && phoneRegex.test(phone);
+  };
+
+  const handlePhoneChange = (value: string) => {
+    // Only allow numbers, spaces, dashes, parentheses, and plus signs
+    const filteredValue = value.replace(/[^0-9\s\-\(\)\+\.]/g, '');
+    setFormData({ ...formData, phone: filteredValue });
+    if (fieldErrors.phone) {
+      setFieldErrors({ ...fieldErrors, phone: '' });
+    }
+  };
+
+  const validateName = (name: string): boolean => {
+    return name.trim().length >= 2 && /^[a-zA-Z\s]+$/.test(name.trim());
+  };
+
+  const validateOrganization = (org: string): boolean => {
+    return org.trim().length >= 2;
+  };
+
+  const validateMessage = (message: string): boolean => {
+    return message.trim().length >= 10;
+  };
+
+  const validateForm = (): boolean => {
+    const errors: {[key: string]: string} = {};
+
+    if (!validateName(formData.name)) {
+      errors.name = 'Name must be at least 2 characters and contain only letters';
+    }
+
+    if (!validateOrganization(formData.organization)) {
+      errors.organization = 'Organization name must be at least 2 characters';
+    }
+
+    if (!validateEmail(formData.email)) {
+      errors.email = 'Please enter a valid email address';
+    }
+
+    if (!validatePhone(formData.phone)) {
+      errors.phone = 'Please enter a valid phone number (at least 10 digits)';
+    }
+
+    if (!validateMessage(formData.message)) {
+      errors.message = 'Message must be at least 10 characters';
+    }
+
+    setFieldErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
+    setFieldErrors({});
+
+    // Validate form fields
+    if (!validateForm()) {
+      setError('Please correct the errors below');
+      setIsSubmitting(false);
+      return;
+    }
 
     const token = recaptchaRef.current?.getValue();
 
@@ -39,7 +109,8 @@ const ContactUs = () => {
         user_data: {
           name: formData.name,
           organization: formData.organization,
-          email: formData.email
+          email: formData.email,
+          phone: formData.phone
         }
       });
     }
@@ -75,7 +146,7 @@ const ContactUs = () => {
       }
 
       setIsSubmitted(true);
-      setFormData({ name: '', organization: '', email: '', message: '' });
+      setFormData({ name: '', organization: '', email: '', phone: '', message: '' });
       
     } catch (error) {
       console.error("Error submitting form", error);
@@ -90,7 +161,8 @@ const ContactUs = () => {
   const handleReset = () => {
     setIsSubmitted(false);
     setError('');
-    setFormData({ name: '', organization: '', email: '', message: '' });
+    setFieldErrors({});
+    setFormData({ name: '', organization: '', email: '', phone: '', message: '' });
   };
 
   if (isSubmitted) {
@@ -170,10 +242,17 @@ const ContactUs = () => {
               type="text"
               placeholder="Enter your name"
               value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="h-12"
+              onChange={(e) => {
+                setFormData({ ...formData, name: e.target.value });
+                // Clear field error when user starts typing
+                if (fieldErrors.name) {
+                  setFieldErrors({ ...fieldErrors, name: '' });
+                }
+              }}
+              className={`h-12 ${fieldErrors.name ? 'border-red-500 focus:border-red-500' : ''}`}
               required
             />
+            {fieldErrors.name && <p className="text-red-500 text-sm">{fieldErrors.name}</p>}
           </div>
 
           {/* Organization Field */}
@@ -183,10 +262,16 @@ const ContactUs = () => {
               type="text"
               placeholder="Enter your organization name"
               value={formData.organization}
-              onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
-              className="h-12"
+              onChange={(e) => {
+                setFormData({ ...formData, organization: e.target.value });
+                if (fieldErrors.organization) {
+                  setFieldErrors({ ...fieldErrors, organization: '' });
+                }
+              }}
+              className={`h-12 ${fieldErrors.organization ? 'border-red-500 focus:border-red-500' : ''}`}
               required
             />
+            {fieldErrors.organization && <p className="text-red-500 text-sm">{fieldErrors.organization}</p>}
           </div>
 
           {/* Email Field */}
@@ -195,11 +280,31 @@ const ContactUs = () => {
             <Input
               type="email"
               placeholder="Enter your email"
-              className="h-12"
+              className={`h-12 ${fieldErrors.email ? 'border-red-500 focus:border-red-500' : ''}`}
               value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              onChange={(e) => {
+                setFormData({ ...formData, email: e.target.value });
+                if (fieldErrors.email) {
+                  setFieldErrors({ ...fieldErrors, email: '' });
+                }
+              }}
               required
             />
+            {fieldErrors.email && <p className="text-red-500 text-sm">{fieldErrors.email}</p>}
+          </div>
+
+          {/* Phone Field */}
+          <div className="flex w-full flex-col gap-3">
+            <Label className="text-lg">Your phone number</Label>
+            <Input
+              type="tel"
+              placeholder="Enter your phone number"
+              className={`h-12 ${fieldErrors.phone ? 'border-red-500 focus:border-red-500' : ''}`}
+              value={formData.phone}
+              onChange={(e) => handlePhoneChange(e.target.value)}
+              required
+            />
+            {fieldErrors.phone && <p className="text-red-500 text-sm">{fieldErrors.phone}</p>}
           </div>
 
           {/* Message Field */}
@@ -207,11 +312,17 @@ const ContactUs = () => {
             <Label className="text-lg">Your message</Label>
             <Textarea
               placeholder="Enter your message"
-              className="h-32"
+              className={`h-32 ${fieldErrors.message ? 'border-red-500 focus:border-red-500' : ''}`}
               value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              onChange={(e) => {
+                setFormData({ ...formData, message: e.target.value });
+                if (fieldErrors.message) {
+                  setFieldErrors({ ...fieldErrors, message: '' });
+                }
+              }}
               required
             />
+            {fieldErrors.message && <p className="text-red-500 text-sm">{fieldErrors.message}</p>}
           </div>
 
           {/* reCAPTCHA Component */}

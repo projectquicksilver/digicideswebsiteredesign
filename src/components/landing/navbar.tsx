@@ -35,16 +35,16 @@ const Navbar = () => {
           name: "Rural Reward",
           href: "/product/rural-reward"
         },
-        {
-          name: "Engagements",
-          href: "/product/engagement"
-        }
       ]
     },
     {
       name: "Services",
       type: "dropdown",
       items: [
+        {
+          name: "Engagements",
+          href: "/services/engagement"
+        },
         {
           name: "Market Research",
           href: "/services/market-research-for-agri-brands"
@@ -61,8 +61,6 @@ const Navbar = () => {
       ]
     }
   ];
-
-  console.log(openSubMenu);
 
   const toggleSubMenu = (name: string) => {
     setOpenSubMenu((prev) => (prev === name ? null : name));
@@ -142,7 +140,7 @@ const Navbar = () => {
                                   <Link
                                     key={subIndex}
                                     href={subItem.href}
-                                    className="block px-3 py-1 text-sm text-background hover:font-bold"
+                                    className="block px-3 py-1 text-sm text-background text-nowrap hover:font-bold"
                                   >
                                     {subItem.name}
                                   </Link>
