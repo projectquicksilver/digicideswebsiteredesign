@@ -29,7 +29,7 @@ const WhatDoWeDo = () => {
             title="Engage"
             text="Leverage omni-channel communication tools to interact with farmers effectively."
             imagePath="/images/engage.png"
-            link="/product/engagement"
+            link="/services/engagement"
           />
         </div>
         <div className="flex w-full flex-col gap-3 md:flex-row">
