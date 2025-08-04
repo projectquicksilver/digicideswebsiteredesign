@@ -13,7 +13,7 @@ const ContactUs = () => {
   const [formData, setFormData] = useState({ name: '', organization: '', email: '', phone: '', message: '' });
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [error, setError] = useState('');
-  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({}); 
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
