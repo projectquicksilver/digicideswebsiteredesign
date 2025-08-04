@@ -13,7 +13,7 @@ const ContactUs = () => {
   const [formData, setFormData] = useState({ name: '', organization: '', email: '', phone: '', message: '' });
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [error, setError] = useState('');
-  const [fieldErrors, setFieldErrors] = useState<{[key: string]: string}>({});
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -52,7 +52,7 @@ const ContactUs = () => {
   };
 
   const validateForm = (): boolean => {
-    const errors: {[key: string]: string} = {};
+    const errors: Record<string, string> = {};
 
     if (!validateName(formData.name)) {
       errors.name = 'Name must be at least 2 characters and contain only letters';
