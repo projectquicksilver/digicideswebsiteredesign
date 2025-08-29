@@ -24,18 +24,6 @@ export default function MeetOurTeam() {
                 imagePath="/images/team/dean.png"
               />
             </div>
-            <div className="flex w-full flex-col gap-3 md:flex-row">
-              <TeamCard
-                title="Shailendra Singh"
-                text=" IIT Kanpur with 12+ years in agritech. Previously Co-Founder at Yuktix and worked with Thinvent & Silverline Design INC"
-                imagePath="/images/team/shailendra.png"
-              />
-              <TeamCard
-                title="Rajeev Jha"
-                text="IIT Kanpur & IIM Bangalore alumnus with 25 years in software development. Previously Founder at Yuktix and worked with Citrix, AOL, Oracle & Indigene"
-                imagePath="/images/team/rajeev.png"
-              />
-            </div>
           </div>
         </div>
       );
