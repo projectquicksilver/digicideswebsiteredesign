@@ -4,7 +4,7 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
-  const { name, organization, email, message } = await req.json() as { name: string, organization: string, email: string, phone: BigInteger, message: string };
+  const { name, organization, email, message } = await req.json() as { name: string, organization: string, email: string, phone: string, message: string };
 
 
   console.log(name, organization, email, phone, message);
@@ -38,4 +38,8 @@ export async function POST(req: Request) {
     console.error('Email send failed:', error);
     return new Response(JSON.stringify({ error: 'Failed to send email' }), { status: 500 });
   }
+}
+
+function phone(name: string,organization: string,email: string,phone: any,message: string) {
+throw new Error('Function not implemented.');
 }
