@@ -4,10 +4,10 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
-  const { name, organization, email, message } = await req.json() as { name: string, organization: string, email: string, message: string };
+  const { name, organization, email, message } = await req.json() as { name: string, organization: string, email: string, phone: BigInteger, message: string };
 
 
-  console.log(name, organization, email, message);
+  console.log(name, organization, email, phone, message);
 
   if (!name || !email || !message) {
     return new Response(JSON.stringify({ error: 'Missing required fields' }), { status: 400 });
@@ -23,6 +23,7 @@ export async function POST(req: Request) {
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Organization:</strong> ${organization}</p>
         <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Message:</strong><br/>${message}</p>
       `,
     });
