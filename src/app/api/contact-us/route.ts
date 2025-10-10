@@ -26,7 +26,7 @@ export async function POST(req: Request) {
 
     // ✅ Send the email through Resend
     const data = await resend.emails.send({
-      from: 'connect@digicides.com',   // ✅ Updated sender email
+      from: 'connect@dreamlaunch.studio',   // ✅ Updated sender email
       to: ['manoj.rajput@digicides.com'],   // ✅ Recipient
       subject: `New Contact Form Submission from ${name}${organization ? ` (${organization})` : ''}`,
       html: `
